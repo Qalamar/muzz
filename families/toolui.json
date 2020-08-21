@@ -1,0 +1,19 @@
+{
+	"name": "ToolUI",
+	"plugin-id": "Sprite",
+	"sid": 272458077346783,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Anchor",
+			"name": "Anchor",
+			"sid": 535740745910935
+		}
+	],
+	"effectTypes": [],
+	"members": [
+		"ToolUIVertical",
+		"ToolUIHorizontal",
+		"ToolUILong"
+	]
+}

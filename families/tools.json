@@ -1,0 +1,19 @@
+{
+	"name": "Tools",
+	"plugin-id": "Sprite",
+	"sid": 265613341302316,
+	"instanceVariables": [
+		{
+			"name": "isSelected",
+			"type": "boolean",
+			"desc": "",
+			"sid": 346929723474447
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"Cursor",
+		"Text"
+	]
+}

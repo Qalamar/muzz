@@ -1,0 +1,1265 @@
+{
+	"name": "Event sheet 1",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 450775025753837,
+					"parameters": {
+						"object": "Sprite"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "snapshot-canvas",
+					"objectClass": "System",
+					"sid": 430442909750907,
+					"disabled": true,
+					"parameters": {
+						"format": "png",
+						"jpeg-quality": "75"
+					}
+				}
+			],
+			"sid": 408091118590501
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-canvas-snapshot",
+					"objectClass": "System",
+					"sid": 898510842622220
+				}
+			],
+			"actions": [
+				{
+					"id": "invoke-download",
+					"objectClass": "Browser",
+					"sid": 244951835163912,
+					"parameters": {
+						"url": "CanvasSnapshot",
+						"filename": "\"image\""
+					}
+				}
+			],
+			"sid": 176981121465425
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-changed",
+					"objectClass": "FileChooser",
+					"sid": 921864323327912
+				}
+			],
+			"actions": [
+				{
+					"id": "load-image-from-url",
+					"objectClass": "Sprite",
+					"sid": 689142438093825,
+					"parameters": {
+						"uri": "FileChooser.FileURLAt(0)",
+						"size": "resize-to-image-size",
+						"cross-origin": "anonymous"
+					}
+				}
+			],
+			"sid": 540760166282774
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 261889427615221
+				}
+			],
+			"actions": [
+				{
+					"id": "set-css-style",
+					"objectClass": "FontSlider",
+					"sid": 382398709734780,
+					"parameters": {
+						"property-name": "\"border\"",
+						"value": "\"1px solid red\""
+					}
+				},
+				{
+					"id": "set-css-style",
+					"objectClass": "HeightInput",
+					"sid": 849166800452956,
+					"parameters": {
+						"property-name": "\"box-shadow\"",
+						"value": "\"0 23px 36px rgba(51, 54, 69, 0.16)\""
+					}
+				},
+				{
+					"id": "set-css-style",
+					"objectClass": "HeightInput",
+					"sid": 394954434538558,
+					"parameters": {
+						"property-name": "\"border\"",
+						"value": "\"none\""
+					}
+				},
+				{
+					"id": "set-css-style",
+					"objectClass": "HeightInput",
+					"sid": 998268388772009,
+					"parameters": {
+						"property-name": "\"text-align\"",
+						"value": "\"center\""
+					}
+				},
+				{
+					"id": "set-css-style",
+					"objectClass": "WidthInput",
+					"sid": 860702601926236,
+					"parameters": {
+						"property-name": "\"box-shadow\"",
+						"value": "\"0 23px 36px rgba(51, 54, 69, 0.16)\""
+					}
+				},
+				{
+					"id": "set-css-style",
+					"objectClass": "WidthInput",
+					"sid": 891432130421211,
+					"parameters": {
+						"property-name": "\"border\"",
+						"value": "\"none\""
+					}
+				},
+				{
+					"id": "set-css-style",
+					"objectClass": "WidthInput",
+					"sid": 133570407854918,
+					"parameters": {
+						"property-name": "\"text-align\"",
+						"value": "\"center\""
+					}
+				}
+			],
+			"sid": 182726554256657
+		},
+		{
+			"eventType": "comment",
+			"text": "Make sure the color format is correct"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-focused",
+					"objectClass": "HeightInput",
+					"sid": 775150606442697,
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "HeightInput",
+					"sid": 508570522416037,
+					"parameters": {
+						"text": "RegexReplace(HeightInput.Text,\"[^a-zA-Z0-9]+\",\"\",\"\")"
+					}
+				}
+			],
+			"sid": 164785369459622,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 786971527782559,
+							"parameters": {
+								"first-value": "len(HeightInput.Text)",
+								"comparison": 4,
+								"second-value": "6"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "HeightInput",
+							"sid": 475119776527749,
+							"parameters": {
+								"text": "left(HeightInput.Text,6)"
+							}
+						}
+					],
+					"sid": 761610004371659
+				}
+			]
+		},
+		{
+			"eventType": "comment",
+			"text": "Current Selected Color"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 336887717382111,
+					"parameters": {
+						"object": "Colors"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 365296428580116,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-all",
+							"objectClass": "System",
+							"sid": 225273006267510,
+							"parameters": {
+								"object": "Colors"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Colors",
+							"sid": 313548086560394,
+							"parameters": {
+								"instance-variable": "isSelected",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 663017429155029
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-by-evaluate",
+							"objectClass": "System",
+							"sid": 101328566340472,
+							"parameters": {
+								"object": "CanvasObjects",
+								"expression": "CanvasObjects.isSelected"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Colors",
+							"sid": 838447023128438,
+							"parameters": {
+								"instance-variable": "isSelected",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-default-color",
+							"objectClass": "Sprite",
+							"sid": 117303340139363,
+							"parameters": {
+								"color": "Colors.ColorValue"
+							}
+						}
+					],
+					"sid": 843619477137845
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-by-evaluate",
+							"objectClass": "System",
+							"sid": 943163131733648,
+							"parameters": {
+								"object": "Text2",
+								"expression": "Text2.isSelected"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Colors",
+							"sid": 159338610743950,
+							"parameters": {
+								"instance-variable": "isSelected",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-font-color",
+							"objectClass": "Text2",
+							"sid": 189611559817139,
+							"parameters": {
+								"color": "Colors.ColorValue"
+							}
+						}
+					],
+					"sid": 186336008051986
+				}
+			]
+		},
+		{
+			"eventType": "comment",
+			"text": "Tool Highlight"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 262111878497633,
+					"parameters": {
+						"object": "Tools"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "ToolShadow",
+					"sid": 848773897082834,
+					"disabled": true
+				},
+				{
+					"callFunction": "hideToolkits",
+					"sid": 344805142512201
+				}
+			],
+			"sid": 822597137242195,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-all",
+							"objectClass": "System",
+							"sid": 260430105653854,
+							"parameters": {
+								"object": "Tools"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Tools",
+							"sid": 403542237909111,
+							"parameters": {
+								"instance-variable": "isSelected",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 270398618740753,
+					"disabled": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "toggle-boolean-instvar",
+							"objectClass": "Tools",
+							"sid": 342317219851442,
+							"parameters": {
+								"instance-variable": "isSelected"
+							}
+						}
+					],
+					"sid": 724641001544340,
+					"disabled": true
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 614291434928894,
+					"parameters": {
+						"object": "CanvasObjects"
+					}
+				},
+				{
+					"id": "on-touched-object",
+					"objectClass": "Touch",
+					"sid": 337281774014398,
+					"parameters": {
+						"object": "CanvasObjects"
+					}
+				},
+				{
+					"id": "is-touching-object",
+					"objectClass": "Touch",
+					"sid": 219138133666431,
+					"parameters": {
+						"object": "CanvasObjects"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 955785314311100,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-all",
+							"objectClass": "System",
+							"sid": 205610495179788,
+							"parameters": {
+								"object": "CanvasObjects"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "CanvasObjects",
+							"sid": 298473177275868,
+							"parameters": {
+								"instance-variable": "isSelected",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 818801818838054
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "CanvasObjects",
+							"sid": 897120840988078,
+							"parameters": {
+								"instance-variable": "isSelected",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Text2",
+							"sid": 920637038090919,
+							"parameters": {
+								"instance-variable": "isSelected",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "HeightInput",
+							"sid": 741925769606157,
+							"parameters": {
+								"text": "str(CanvasObjects.Height)"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "WidthInput",
+							"sid": 664985084688859,
+							"parameters": {
+								"text": "str(CanvasObjects.Width)"
+							}
+						},
+						{
+							"callFunction": "showObjectToolkit",
+							"sid": 628668188039368
+						}
+					],
+					"sid": 496917268992825
+				}
+			],
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 708906936085513,
+					"parameters": {
+						"object": "Text2"
+					}
+				},
+				{
+					"id": "on-touched-object",
+					"objectClass": "Touch",
+					"sid": 900039299956240,
+					"parameters": {
+						"object": "Text2"
+					}
+				},
+				{
+					"id": "is-touching-object",
+					"objectClass": "Touch",
+					"sid": 543007694175297,
+					"parameters": {
+						"object": "Text2"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 847469171698635,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-all",
+							"objectClass": "System",
+							"sid": 851526436832135,
+							"parameters": {
+								"object": "TextObject"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Text2",
+							"sid": 448354681213273,
+							"parameters": {
+								"instance-variable": "isSelected",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 566935000126476
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Text2",
+							"sid": 857805965953375,
+							"parameters": {
+								"instance-variable": "isSelected",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "CanvasObjects",
+							"sid": 365501873390541,
+							"parameters": {
+								"instance-variable": "isSelected",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 130825068566158
+				}
+			],
+			"isOrBlock": true
+		},
+		{
+			"functionName": "moveCursor",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-enabled",
+					"objectClass": "CanvasObjects",
+					"sid": 566139772154764,
+					"behaviorType": "DragDrop",
+					"parameters": {
+						"state": "enabled"
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "TextObject",
+					"sid": 171951618285535,
+					"behaviorType": "DragDrop",
+					"parameters": {
+						"state": "enabled"
+					}
+				}
+			],
+			"sid": 643593063068443
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-text-changed",
+					"objectClass": "HeightInput",
+					"sid": 205840419480844
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "CanvasObjects",
+					"sid": 368099219560729,
+					"parameters": {
+						"instance-variable": "isSelected"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "tween-one-property",
+					"objectClass": "CanvasObjects",
+					"sid": 855249577571885,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "offsetHeight",
+						"end-value": "int(HeightInput.Text)",
+						"time": "0.5",
+						"ease": "easeinoutexpo",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no"
+					}
+				}
+			],
+			"sid": 844734548025297
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-text-changed",
+					"objectClass": "WidthInput",
+					"sid": 162019910176355
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "CanvasObjects",
+					"sid": 504294849674556,
+					"parameters": {
+						"instance-variable": "isSelected"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "tween-one-property",
+					"objectClass": "CanvasObjects",
+					"sid": 169407638839537,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "offsetWidth",
+						"end-value": "int(WidthInput.Text)",
+						"time": "0.5",
+						"ease": "easeinoutexpo",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no"
+					}
+				}
+			],
+			"sid": 997956659833736
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-changed",
+					"objectClass": "FontSlider",
+					"sid": 486142313454592
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Text2",
+					"sid": 851013975151368,
+					"parameters": {
+						"instance-variable": "isSelected"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-font-size",
+					"objectClass": "Text2",
+					"sid": 919358557854975,
+					"parameters": {
+						"size-pt": "FontSlider.Value*0.42"
+					}
+				},
+				{
+					"id": "set-size",
+					"objectClass": "Text2",
+					"sid": 624592287366352,
+					"parameters": {
+						"width": "-2.65*(len(Text2.Text)*len(Text2.Text))+92.2*len(Text2.Text)-204.7",
+						"height": "Text2.FaceSize*3"
+					}
+				}
+			],
+			"sid": 213828756351402
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 718635914540476,
+					"parameters": {
+						"key": 13
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Text",
+					"sid": 950098094631846,
+					"parameters": {
+						"instance-variable": "isSelected"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Text2",
+					"sid": 248509254654903,
+					"parameters": {
+						"instance-variable": "isSelected",
+						"value": "false"
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 989727227693510,
+					"parameters": {
+						"object-to-create": "Text2",
+						"layer": "1",
+						"x": "640",
+						"y": "360"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Text2",
+					"sid": 574913662794422,
+					"parameters": {
+						"instance-variable": "isSelected",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "Text2",
+					"sid": 764450601687159,
+					"parameters": {
+						"text": "TextTool.Text"
+					}
+				},
+				{
+					"id": "tween-two-properties",
+					"objectClass": "TextTool",
+					"sid": 830461806960799,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "position",
+						"end-x": "-400",
+						"end-y": "192",
+						"time": "1",
+						"ease": "easeinoutexpo",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no"
+					}
+				},
+				{
+					"id": "set-size",
+					"objectClass": "Text2",
+					"sid": 752950457785303,
+					"parameters": {
+						"width": "len(Text2.Text)*48/3",
+						"height": "Text2.FaceSize*2.5"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Text",
+					"sid": 913857642961784,
+					"parameters": {
+						"instance-variable": "isSelected",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-value",
+					"objectClass": "FontSlider",
+					"sid": 142031732253660,
+					"parameters": {
+						"value": "50"
+					}
+				}
+			],
+			"sid": 450512141303661
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 804790886332848,
+					"parameters": {
+						"object": "Text"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "ToolShadow",
+					"sid": 754883650971381
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Text",
+					"sid": 583312855740035,
+					"parameters": {
+						"object": "ToolShadow",
+						"layer": "1",
+						"image-point": "0"
+					}
+				}
+			],
+			"sid": 832886172446848,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-x",
+							"objectClass": "TextTool",
+							"sid": 535045873797408,
+							"parameters": {
+								"comparison": 2,
+								"x-co-ordinate": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "tween-two-properties",
+							"objectClass": "TextTool",
+							"sid": 734242992129587,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"\"",
+								"property": "position",
+								"end-x": "80",
+								"end-y": "192",
+								"time": "1",
+								"ease": "easeinoutexpo",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no"
+							}
+						},
+						{
+							"id": "tween-two-properties",
+							"objectClass": "FontSlider",
+							"sid": 517279647591692,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"\"",
+								"property": "position",
+								"end-x": "FontSlider.X",
+								"end-y": "16",
+								"time": "1",
+								"ease": "easeinoutexpo",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no"
+							}
+						},
+						{
+							"id": "tween-two-properties",
+							"objectClass": "TextFontSize",
+							"sid": 799191606490485,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"\"",
+								"property": "position",
+								"end-x": "TextFontSize.X",
+								"end-y": "32",
+								"time": "1",
+								"ease": "easeinoutexpo",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Text",
+							"sid": 703369281121925,
+							"parameters": {
+								"instance-variable": "isSelected",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 968891471793904
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 766074554904207
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "hideToolkits",
+							"sid": 721327995143907
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Text",
+							"sid": 976239576697424,
+							"parameters": {
+								"instance-variable": "isSelected",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 911060567657916
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 495071929513641,
+					"parameters": {
+						"object": "Cursor"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "ToolShadow",
+					"sid": 519418656780467
+				},
+				{
+					"callFunction": "hideToolkits",
+					"sid": 511913903201903
+				},
+				{
+					"id": "toggle-boolean-instvar",
+					"objectClass": "Cursor",
+					"sid": 575620253530225,
+					"parameters": {
+						"instance-variable": "isSelected"
+					}
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Cursor",
+					"sid": 705203619835157,
+					"parameters": {
+						"object": "ToolShadow",
+						"layer": "1",
+						"image-point": "0"
+					}
+				}
+			],
+			"sid": 707102234716557
+		},
+		{
+			"functionName": "hideToolkits",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "tween-two-properties",
+					"objectClass": "TextTool",
+					"sid": 508756464803935,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "position",
+						"end-x": "-400",
+						"end-y": "192",
+						"time": "1",
+						"ease": "easeinoutexpo",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no"
+					}
+				},
+				{
+					"id": "tween-two-properties",
+					"objectClass": "WidthInput",
+					"sid": 985040826733371,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "position",
+						"end-x": "WidthInput.X",
+						"end-y": "-100",
+						"time": "1",
+						"ease": "easeinoutexpo",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no"
+					}
+				},
+				{
+					"id": "tween-two-properties",
+					"objectClass": "HeightInput",
+					"sid": 535157275754251,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "position",
+						"end-x": "HeightInput.X",
+						"end-y": "-100",
+						"time": "1",
+						"ease": "easeinoutexpo",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no"
+					}
+				},
+				{
+					"id": "tween-two-properties",
+					"objectClass": "FontSlider",
+					"sid": 994986844747276,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "position",
+						"end-x": "FontSlider.X",
+						"end-y": "-100",
+						"time": "1",
+						"ease": "easeinoutexpo",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no"
+					}
+				},
+				{
+					"id": "tween-two-properties",
+					"objectClass": "TextFontSize",
+					"sid": 964418747070809,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "position",
+						"end-x": "TextFontSize.X",
+						"end-y": "-100",
+						"time": "1",
+						"ease": "easeinoutexpo",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no"
+					}
+				},
+				{
+					"id": "tween-two-properties",
+					"objectClass": "TextObjectDimensions",
+					"sid": 250636443211626,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "position",
+						"end-x": "TextObjectDimensions.X",
+						"end-y": "-100",
+						"time": "1",
+						"ease": "easeinoutexpo",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no"
+					}
+				}
+			],
+			"sid": 235872392885459
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 940591606218040
+				},
+				{
+					"id": "pick-by-evaluate",
+					"objectClass": "System",
+					"sid": 465437323750291,
+					"parameters": {
+						"object": "Text2",
+						"expression": "Text2.isSelected"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "TextFontSize",
+					"sid": 688819582302832,
+					"parameters": {
+						"text": "round(int(Text2.FaceSize))"
+					}
+				}
+			],
+			"sid": 557820193145072
+		},
+		{
+			"functionName": "showObjectToolkit",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "tween-two-properties",
+					"objectClass": "WidthInput",
+					"sid": 982092408648886,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "position",
+						"end-x": "WidthInput.X",
+						"end-y": "16",
+						"time": "1",
+						"ease": "easeinoutexpo",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no"
+					}
+				},
+				{
+					"id": "tween-two-properties",
+					"objectClass": "HeightInput",
+					"sid": 728601587941782,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "position",
+						"end-x": "HeightInput.X",
+						"end-y": "16",
+						"time": "1",
+						"ease": "easeinoutexpo",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no"
+					}
+				},
+				{
+					"id": "tween-two-properties",
+					"objectClass": "TextObjectDimensions",
+					"sid": 959759777432766,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "position",
+						"end-x": "TextObjectDimensions.X",
+						"end-y": "32",
+						"time": "1",
+						"ease": "easeinoutexpo",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no"
+					}
+				}
+			],
+			"sid": 899299178823700
+		},
+		{
+			"functionName": "showTextToolkit",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "tween-two-properties",
+					"objectClass": "FontSlider",
+					"sid": 403398368475418,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "position",
+						"end-x": "FontSlider.X",
+						"end-y": "16",
+						"time": "1",
+						"ease": "easeinoutexpo",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no"
+					}
+				},
+				{
+					"id": "tween-two-properties",
+					"objectClass": "TextFontSize",
+					"sid": 110859705194842,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "position",
+						"end-x": "TextFontSize.X",
+						"end-y": "32",
+						"time": "1",
+						"ease": "easeinoutexpo",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no"
+					}
+				}
+			],
+			"sid": 571306275506776
+		}
+	],
+	"sid": 389047456855775
+}

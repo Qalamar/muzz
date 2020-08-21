@@ -1,0 +1,22 @@
+{
+	"name": "Text2",
+	"plugin-id": "Text",
+	"sid": 669396956465430,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "isSelected",
+			"type": "boolean",
+			"desc": "",
+			"sid": 880848310710331
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "DragnDrop",
+			"name": "DragDrop",
+			"sid": 400434376479976
+		}
+	],
+	"effectTypes": []
+}

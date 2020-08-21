@@ -1,0 +1,14 @@
+{
+	"name": "WidthInput",
+	"plugin-id": "TextBox",
+	"sid": 396419554015978,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 275841291143548
+		}
+	]
+}

@@ -1,0 +1,26 @@
+{
+	"name": "TextFontSize",
+	"plugin-id": "Spritefont2",
+	"sid": 693974749233469,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 942091178804985
+		}
+	],
+	"effectTypes": [],
+	"image": {
+		"width": 512,
+		"height": 256,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "png",
+		"exportQuality": 0.8,
+		"imageSpriteId": 1320559,
+		"useCollisionPoly": true
+	}
+}

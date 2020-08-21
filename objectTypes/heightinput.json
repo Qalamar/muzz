@@ -1,0 +1,14 @@
+{
+	"name": "HeightInput",
+	"plugin-id": "TextBox",
+	"sid": 540726818158056,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 263574637446198
+		}
+	]
+}

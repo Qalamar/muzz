@@ -1,0 +1,14 @@
+{
+	"name": "FontSlider",
+	"plugin-id": "sliderbar",
+	"sid": 541048878277893,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 198175614196021
+		}
+	]
+}

@@ -1,0 +1,44 @@
+{
+	"name": "Colors",
+	"plugin-id": "Sprite",
+	"sid": 309955305407802,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "isSelected",
+			"type": "boolean",
+			"desc": "",
+			"sid": 609330973649051
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 35,
+						"height": 34,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7078676,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 862662699986800,
+				"name": "Default",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

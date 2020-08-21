@@ -1,0 +1,20 @@
+{
+	"name": "Anchors",
+	"plugin-id": "Sprite",
+	"sid": 919736866356428,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Anchor",
+			"name": "Anchor",
+			"sid": 884067115717027
+		}
+	],
+	"effectTypes": [],
+	"members": [
+		"Colors",
+		"Cursor",
+		"ToolShadow",
+		"Text"
+	]
+}

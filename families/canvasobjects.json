@@ -1,0 +1,29 @@
+{
+	"name": "CanvasObjects",
+	"plugin-id": "Sprite",
+	"sid": 120573640477362,
+	"instanceVariables": [
+		{
+			"name": "isSelected",
+			"type": "boolean",
+			"desc": "",
+			"sid": 562147694407547
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "DragnDrop",
+			"name": "DragDrop",
+			"sid": 583845333574845
+		},
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 607318973582885
+		}
+	],
+	"effectTypes": [],
+	"members": [
+		"Sprite"
+	]
+}

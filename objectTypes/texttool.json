@@ -1,0 +1,14 @@
+{
+	"name": "TextTool",
+	"plugin-id": "TextBox",
+	"sid": 777594435425471,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 340750148704249
+		}
+	]
+}
