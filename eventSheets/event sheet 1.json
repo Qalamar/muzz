@@ -559,6 +559,69 @@
 						}
 					],
 					"sid": 496917268992825
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "CanvasObjects",
+							"sid": 685568161101972,
+							"parameters": {
+								"instance-variable": "isLocked"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-enabled",
+							"objectClass": "CanvasObjects",
+							"sid": 101713482996273,
+							"behaviorType": "DragDrop",
+							"parameters": {
+								"state": "disabled"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Lock",
+							"sid": 705577109923528,
+							"parameters": {
+								"frame-number": "1"
+							}
+						}
+					],
+					"sid": 365090237548145
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 517012009989036
+						}
+					],
+					"actions": [
+						{
+							"id": "set-enabled",
+							"objectClass": "CanvasObjects",
+							"sid": 773521114642655,
+							"behaviorType": "DragDrop",
+							"parameters": {
+								"state": "enabled"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Lock",
+							"sid": 162562108870193,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 806456234737203
 				}
 			],
 			"isOrBlock": true
@@ -651,6 +714,69 @@
 						}
 					],
 					"sid": 130825068566158
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Text2",
+							"sid": 940203323106345,
+							"parameters": {
+								"instance-variable": "isLocked"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-enabled",
+							"objectClass": "Text2",
+							"sid": 545641470489401,
+							"behaviorType": "DragDrop",
+							"parameters": {
+								"state": "disabled"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Lock",
+							"sid": 740506479979523,
+							"parameters": {
+								"frame-number": "1"
+							}
+						}
+					],
+					"sid": 277111822847284
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 969104744442540
+						}
+					],
+					"actions": [
+						{
+							"id": "set-enabled",
+							"objectClass": "Text2",
+							"sid": 691568498469880,
+							"behaviorType": "DragDrop",
+							"parameters": {
+								"state": "enabled"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Lock",
+							"sid": 863698050911125,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 974200465095457
 				}
 			],
 			"isOrBlock": true
@@ -1083,24 +1209,6 @@
 						"layer": "2",
 						"image-point": "0"
 					}
-				},
-				{
-					"id": "set-enabled",
-					"objectClass": "CanvasObjects",
-					"sid": 824287901900497,
-					"behaviorType": "DragDrop",
-					"parameters": {
-						"state": "enabled"
-					}
-				},
-				{
-					"id": "set-enabled",
-					"objectClass": "Text2",
-					"sid": 865937532206563,
-					"behaviorType": "DragDrop",
-					"parameters": {
-						"state": "enabled"
-					}
 				}
 			],
 			"sid": 707102234716557
@@ -1167,6 +1275,132 @@
 			"eventType": "block",
 			"conditions": [
 				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 748158028935307,
+					"parameters": {
+						"object": "SendBottom"
+					}
+				},
+				{
+					"id": "pick-by-evaluate",
+					"objectClass": "System",
+					"sid": 824034873191695,
+					"parameters": {
+						"object": "CanvasObjects",
+						"expression": "CanvasObjects.isSelected"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "move-to-bottom",
+					"objectClass": "CanvasObjects",
+					"sid": 506337138170060
+				}
+			],
+			"sid": 794496126299596
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 839299866595851,
+					"parameters": {
+						"object": "SendTop"
+					}
+				},
+				{
+					"id": "pick-by-evaluate",
+					"objectClass": "System",
+					"sid": 934341464031022,
+					"parameters": {
+						"object": "CanvasObjects",
+						"expression": "CanvasObjects.isSelected"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "move-to-top",
+					"objectClass": "CanvasObjects",
+					"sid": 353993337261016
+				}
+			],
+			"sid": 323989651814159
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 858157228383087,
+					"parameters": {
+						"object": "Lock"
+					}
+				},
+				{
+					"id": "pick-by-evaluate",
+					"objectClass": "System",
+					"sid": 963344434429522,
+					"parameters": {
+						"object": "CanvasObjects",
+						"expression": "CanvasObjects.isSelected"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "toggle-boolean-instvar",
+					"objectClass": "CanvasObjects",
+					"sid": 184928657284719,
+					"parameters": {
+						"instance-variable": "isLocked"
+					}
+				}
+			],
+			"sid": 779345685413024
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 407876833716100,
+					"parameters": {
+						"object": "Lock"
+					}
+				},
+				{
+					"id": "pick-by-evaluate",
+					"objectClass": "System",
+					"sid": 422915694108788,
+					"parameters": {
+						"object": "Text2",
+						"expression": "Text2.isSelected"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "toggle-boolean-instvar",
+					"objectClass": "Text2",
+					"sid": 710927851473744,
+					"parameters": {
+						"instance-variable": "isLocked"
+					}
+				}
+			],
+			"sid": 635454567196956
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
 					"id": "on-created",
 					"objectClass": "Dot1",
 					"sid": 107732452766872
@@ -1226,9 +1460,97 @@
 						"x": "Touch.X",
 						"y": "Touch.y"
 					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "CanvasObjects",
+					"sid": 700577782442178,
+					"behaviorType": "DragDrop",
+					"parameters": {
+						"state": "disabled"
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "Text2",
+					"sid": 901695547961820,
+					"behaviorType": "DragDrop",
+					"parameters": {
+						"state": "disabled"
+					}
 				}
 			],
 			"sid": 763645696862476
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Brush",
+					"sid": 733339575230795,
+					"parameters": {
+						"instance-variable": "isSelected"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [],
+			"sid": 172227223363270,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "CanvasObjects",
+							"sid": 880725172384507,
+							"parameters": {
+								"instance-variable": "isLocked"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-enabled",
+							"objectClass": "CanvasObjects",
+							"sid": 833564885565401,
+							"behaviorType": "DragDrop",
+							"parameters": {
+								"state": "enabled"
+							}
+						}
+					],
+					"sid": 825843794772222
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Text2",
+							"sid": 368918940218732,
+							"parameters": {
+								"instance-variable": "isLocked"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-enabled",
+							"objectClass": "Text2",
+							"sid": 758953753136088,
+							"behaviorType": "DragDrop",
+							"parameters": {
+								"state": "enabled"
+							}
+						}
+					],
+					"sid": 719400285779999
+				}
+			]
 		},
 		{
 			"functionName": "hideToolkits",

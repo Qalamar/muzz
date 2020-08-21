@@ -1,0 +1,49 @@
+{
+	"name": "Lock",
+	"plugin-id": "Sprite",
+	"sid": 168615256765228,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 48,
+						"height": 48,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\Users\\Tariq\\Documents\\unlock.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2263778,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 49,
+						"height": 48,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\Users\\Tariq\\Downloads\\Photoshop clone\\slice21.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9547183,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 764663862004321,
+				"name": "Default",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

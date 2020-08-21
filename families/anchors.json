@@ -17,6 +17,9 @@
 		"ToolShadow",
 		"Text",
 		"Brush",
-		"ToolShadow2"
+		"ToolShadow2",
+		"SendBottom",
+		"SendTop",
+		"Lock"
 	]
 }

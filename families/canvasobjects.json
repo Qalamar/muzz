@@ -8,6 +8,12 @@
 			"type": "boolean",
 			"desc": "",
 			"sid": 562147694407547
+		},
+		{
+			"name": "isLocked",
+			"type": "boolean",
+			"desc": "",
+			"sid": 540935358468505
 		}
 	],
 	"behaviorTypes": [

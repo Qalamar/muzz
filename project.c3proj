@@ -161,7 +161,10 @@
 			"TextObjectDimensions",
 			"Brush",
 			"Dot1",
-			"ToolShadow2"
+			"ToolShadow2",
+			"SendBottom",
+			"SendTop",
+			"Lock"
 		],
 		"subfolders": [
 			{

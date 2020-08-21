@@ -1,0 +1,57 @@
+{
+	"name": "SendTop",
+	"plugin-id": "Sprite",
+	"sid": 601528702136194,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 49,
+						"height": 48,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\Users\\Tariq\\Downloads\\Photoshop clone\\slice19.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7312487,
+						"collisionPoly": {
+							"points": [
+								0.04081632653061224,
+								0.041666666666666664,
+								0.5,
+								0,
+								0.9387755102040817,
+								0.041666666666666664,
+								0.9795918367346939,
+								0.5,
+								0.9387755102040817,
+								0.9375,
+								0.5,
+								0.9791666666666666,
+								0.04081632653061224,
+								0.9375,
+								0,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 665029250032336,
+				"name": "Default",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
