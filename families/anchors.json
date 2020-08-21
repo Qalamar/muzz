@@ -20,6 +20,7 @@
 		"ToolShadow2",
 		"SendBottom",
 		"SendTop",
-		"Lock"
+		"Lock",
+		"Import"
 	]
 }

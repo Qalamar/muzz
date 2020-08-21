@@ -61,7 +61,7 @@
 			"actions": [
 				{
 					"id": "load-image-from-url",
-					"objectClass": "Sprite",
+					"objectClass": "ImportedImage",
 					"sid": 689142438093825,
 					"parameters": {
 						"uri": "FileChooser.FileURLAt(0)",
@@ -1212,6 +1212,42 @@
 				}
 			],
 			"sid": 707102234716557
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 633403600033311,
+					"parameters": {
+						"object": "Import"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "ToolShadow",
+					"sid": 603802995102803
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Import",
+					"sid": 166267512590873,
+					"parameters": {
+						"object": "ToolShadow",
+						"layer": "2",
+						"image-point": "0"
+					}
+				},
+				{
+					"id": "click",
+					"objectClass": "FileChooser",
+					"sid": 967654653446918
+				}
+			],
+			"sid": 410268220862146
 		},
 		{
 			"eventType": "block",

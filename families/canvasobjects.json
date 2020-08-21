@@ -30,6 +30,7 @@
 	],
 	"effectTypes": [],
 	"members": [
-		"Sprite"
+		"Sprite",
+		"ImportedImage"
 	]
 }
