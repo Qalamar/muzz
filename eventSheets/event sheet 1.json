@@ -218,7 +218,13 @@
 					}
 				}
 			],
-			"actions": [],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "ToolShadow2",
+					"sid": 122834191453494
+				}
+			],
 			"sid": 365296428580116,
 			"children": [
 				{
@@ -257,6 +263,12 @@
 								"object": "CanvasObjects",
 								"expression": "CanvasObjects.isSelected"
 							}
+						},
+						{
+							"id": "is-enabled",
+							"objectClass": "CanvasObjects",
+							"sid": 497324868817176,
+							"behaviorType": "DragDrop"
 						}
 					],
 					"actions": [
@@ -291,6 +303,12 @@
 								"object": "Text2",
 								"expression": "Text2.isSelected"
 							}
+						},
+						{
+							"id": "is-enabled",
+							"objectClass": "Text2",
+							"sid": 347552600449790,
+							"behaviorType": "DragDrop"
 						}
 					],
 					"actions": [
@@ -313,6 +331,51 @@
 						}
 					],
 					"sid": 186336008051986
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Brush",
+							"sid": 395750152060448,
+							"disabled": true,
+							"parameters": {
+								"instance-variable": "isSelected"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Colors",
+							"sid": 742765531563584,
+							"parameters": {
+								"instance-variable": "isSelected",
+								"value": "true"
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "Colors",
+							"sid": 496585565200999,
+							"parameters": {
+								"object": "ToolShadow2",
+								"layer": "2",
+								"image-point": "0"
+							}
+						},
+						{
+							"id": "move-to-object",
+							"objectClass": "ToolShadow2",
+							"sid": 152957372008946,
+							"parameters": {
+								"where": "in-front",
+								"object": "ToolUIHorizontal"
+							}
+						}
+					],
+					"sid": 796872106413171
 				}
 			]
 		},
@@ -334,14 +397,17 @@
 			],
 			"actions": [
 				{
-					"id": "destroy",
-					"objectClass": "ToolShadow",
-					"sid": 848773897082834,
-					"disabled": true
-				},
-				{
 					"callFunction": "hideToolkits",
 					"sid": 344805142512201
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "CanvasObjects",
+					"sid": 860179583425742,
+					"parameters": {
+						"instance-variable": "isSelected",
+						"value": "false"
+					}
 				}
 			],
 			"sid": 822597137242195,
@@ -369,24 +435,23 @@
 							}
 						}
 					],
-					"sid": 270398618740753,
-					"disabled": true
+					"sid": 270398618740753
 				},
 				{
 					"eventType": "block",
 					"conditions": [],
 					"actions": [
 						{
-							"id": "toggle-boolean-instvar",
+							"id": "set-boolean-instvar",
 							"objectClass": "Tools",
-							"sid": 342317219851442,
+							"sid": 479773061281811,
 							"parameters": {
-								"instance-variable": "isSelected"
+								"instance-variable": "isSelected",
+								"value": "true"
 							}
 						}
 					],
-					"sid": 724641001544340,
-					"disabled": true
+					"sid": 724641001544340
 				}
 			]
 		},
@@ -867,10 +932,10 @@
 				{
 					"id": "spawn-another-object",
 					"objectClass": "Text",
-					"sid": 583312855740035,
+					"sid": 816760936763979,
 					"parameters": {
 						"object": "ToolShadow",
-						"layer": "1",
+						"layer": "2",
 						"image-point": "0"
 					}
 				}
@@ -1001,13 +1066,10 @@
 					"sid": 519418656780467
 				},
 				{
-					"callFunction": "hideToolkits",
-					"sid": 511913903201903
-				},
-				{
 					"id": "toggle-boolean-instvar",
 					"objectClass": "Cursor",
 					"sid": 575620253530225,
+					"disabled": true,
 					"parameters": {
 						"instance-variable": "isSelected"
 					}
@@ -1015,15 +1077,158 @@
 				{
 					"id": "spawn-another-object",
 					"objectClass": "Cursor",
-					"sid": 705203619835157,
+					"sid": 710002302859283,
 					"parameters": {
 						"object": "ToolShadow",
-						"layer": "1",
+						"layer": "2",
 						"image-point": "0"
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "CanvasObjects",
+					"sid": 824287901900497,
+					"behaviorType": "DragDrop",
+					"parameters": {
+						"state": "enabled"
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "Text2",
+					"sid": 865937532206563,
+					"behaviorType": "DragDrop",
+					"parameters": {
+						"state": "enabled"
 					}
 				}
 			],
 			"sid": 707102234716557
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 838060573730718,
+					"parameters": {
+						"object": "Brush"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "ToolShadow",
+					"sid": 652453461876946
+				},
+				{
+					"id": "toggle-boolean-instvar",
+					"objectClass": "Brush",
+					"sid": 573244436986901,
+					"disabled": true,
+					"parameters": {
+						"instance-variable": "isSelected"
+					}
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Brush",
+					"sid": 386114854824993,
+					"parameters": {
+						"object": "ToolShadow",
+						"layer": "2",
+						"image-point": "0"
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "CanvasObjects",
+					"sid": 681671427624491,
+					"behaviorType": "DragDrop",
+					"parameters": {
+						"state": "disabled"
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "Text2",
+					"sid": 259812780344881,
+					"behaviorType": "DragDrop",
+					"parameters": {
+						"state": "disabled"
+					}
+				}
+			],
+			"sid": 253189253335425
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "Dot1",
+					"sid": 107732452766872
+				},
+				{
+					"id": "pick-by-evaluate",
+					"objectClass": "System",
+					"sid": 103373412797149,
+					"parameters": {
+						"object": "Colors",
+						"expression": "Colors.isSelected"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-default-color",
+					"objectClass": "Dot1",
+					"sid": 483879791656603,
+					"parameters": {
+						"color": "Colors.ColorValue"
+					}
+				}
+			],
+			"sid": 529322936203409
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Brush",
+					"sid": 838734136627308,
+					"parameters": {
+						"instance-variable": "isSelected"
+					}
+				},
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 869154144777439
+				},
+				{
+					"id": "is-in-touch",
+					"objectClass": "Touch",
+					"sid": 891171212983551
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 633598055153354,
+					"parameters": {
+						"object-to-create": "Dot1",
+						"layer": "1",
+						"x": "Touch.X",
+						"y": "Touch.y"
+					}
+				}
+			],
+			"sid": 763645696862476
 		},
 		{
 			"functionName": "hideToolkits",

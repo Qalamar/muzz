@@ -1,0 +1,42 @@
+{
+	"name": "ToolShadow2",
+	"plugin-id": "Sprite",
+	"sid": 431742666222726,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [
+		{
+			"effectId": "sphere",
+			"name": "Sphere"
+		}
+	],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 76,
+						"height": 76,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\Users\\Tariq\\Downloads\\Photoshop clone\\shadow.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6108255,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 156091846876957,
+				"name": "Default",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

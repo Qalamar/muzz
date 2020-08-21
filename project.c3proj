@@ -125,6 +125,14 @@
 			"author": "Scirra",
 			"version": "r210.2",
 			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "sphere",
+			"name": "Sphere",
+			"author": "Brad Larson",
+			"version": "r210.2",
+			"bundled": false
 		}
 	],
 	"uniqueId": "qvlq90kpltx",
@@ -150,7 +158,10 @@
 			"TextObject",
 			"Text2",
 			"TextFontSize",
-			"TextObjectDimensions"
+			"TextObjectDimensions",
+			"Brush",
+			"Dot1",
+			"ToolShadow2"
 		],
 		"subfolders": [
 			{

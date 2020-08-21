@@ -1,0 +1,37 @@
+{
+	"name": "Dot1",
+	"plugin-id": "Sprite",
+	"sid": 438271736329819,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 31,
+						"height": 31,
+						"originX": 0.5483870967741935,
+						"originY": 0.3225806451612903,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3663698,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 635093832662116,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
