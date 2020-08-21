@@ -442,6 +442,19 @@
 								"instance-variable": "isSelected",
 								"value": "false"
 							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Text2",
+							"sid": 157149197386131,
+							"parameters": {
+								"instance-variable": "isSelected",
+								"value": "false"
+							}
+						},
+						{
+							"callFunction": "hideToolkits",
+							"sid": 851331353501814
 						}
 					],
 					"sid": 818801818838054
@@ -457,15 +470,6 @@
 							"parameters": {
 								"instance-variable": "isSelected",
 								"value": "true"
-							}
-						},
-						{
-							"id": "set-boolean-instvar",
-							"objectClass": "Text2",
-							"sid": 920637038090919,
-							"parameters": {
-								"instance-variable": "isSelected",
-								"value": "false"
 							}
 						},
 						{
@@ -546,6 +550,19 @@
 								"instance-variable": "isSelected",
 								"value": "false"
 							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "CanvasObjects",
+							"sid": 506467618950932,
+							"parameters": {
+								"instance-variable": "isSelected",
+								"value": "false"
+							}
+						},
+						{
+							"callFunction": "hideToolkits",
+							"sid": 602769542345995
 						}
 					],
 					"sid": 566935000126476
@@ -564,13 +581,8 @@
 							}
 						},
 						{
-							"id": "set-boolean-instvar",
-							"objectClass": "CanvasObjects",
-							"sid": 365501873390541,
-							"parameters": {
-								"instance-variable": "isSelected",
-								"value": "false"
-							}
+							"callFunction": "showTextToolkit",
+							"sid": 219495297208483
 						}
 					],
 					"sid": 130825068566158
@@ -838,6 +850,15 @@
 				}
 			],
 			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Text2",
+					"sid": 853853284801492,
+					"parameters": {
+						"instance-variable": "isSelected",
+						"value": "false"
+					}
+				},
 				{
 					"id": "destroy",
 					"objectClass": "ToolShadow",
