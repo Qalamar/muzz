@@ -69,6 +69,17 @@
 			],
 			"actions": [
 				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 612615852008700,
+					"parameters": {
+						"object-to-create": "ImportedImage",
+						"layer": "1",
+						"x": "640",
+						"y": "360"
+					}
+				},
+				{
 					"id": "load-image-from-url",
 					"objectClass": "ImportedImage",
 					"sid": 689142438093825,
@@ -176,6 +187,60 @@
 					"id": "set-css-style",
 					"objectClass": "AngleInput",
 					"sid": 388330008109397,
+					"parameters": {
+						"property-name": "\"text-align\"",
+						"value": "\"center\""
+					}
+				},
+				{
+					"id": "set-css-style",
+					"objectClass": "URLInput",
+					"sid": 166780760282453,
+					"parameters": {
+						"property-name": "\"box-shadow\"",
+						"value": "\"0 23px 36px rgba(51, 54, 69, 0.16)\""
+					}
+				},
+				{
+					"id": "set-css-style",
+					"objectClass": "URLInput",
+					"sid": 277581640425874,
+					"parameters": {
+						"property-name": "\"border\"",
+						"value": "\"none\""
+					}
+				},
+				{
+					"id": "set-css-style",
+					"objectClass": "URLInput",
+					"sid": 147223194069827,
+					"parameters": {
+						"property-name": "\"text-align\"",
+						"value": "\"center\""
+					}
+				},
+				{
+					"id": "set-css-style",
+					"objectClass": "TextTool",
+					"sid": 992631484790798,
+					"parameters": {
+						"property-name": "\"box-shadow\"",
+						"value": "\"0 23px 36px rgba(51, 54, 69, 0.16)\""
+					}
+				},
+				{
+					"id": "set-css-style",
+					"objectClass": "TextTool",
+					"sid": 459578463640234,
+					"parameters": {
+						"property-name": "\"border\"",
+						"value": "\"none\""
+					}
+				},
+				{
+					"id": "set-css-style",
+					"objectClass": "TextTool",
+					"sid": 725822262106241,
 					"parameters": {
 						"property-name": "\"text-align\"",
 						"value": "\"center\""
@@ -1296,6 +1361,14 @@
 							}
 						},
 						{
+							"id": "set-text",
+							"objectClass": "TextTool",
+							"sid": 597950683494931,
+							"parameters": {
+								"text": "\"\""
+							}
+						},
+						{
 							"id": "set-boolean-instvar",
 							"objectClass": "Text",
 							"sid": 703369281121925,
@@ -1410,6 +1483,118 @@
 				}
 			],
 			"sid": 410268220862146
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 911075350431049,
+					"parameters": {
+						"object": "ImportURL"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "tween-two-properties",
+					"objectClass": "URLInput",
+					"sid": 102663103729501,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "position",
+						"end-x": "80",
+						"end-y": "URLInput.Y",
+						"time": "1",
+						"ease": "easeinoutexpo",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "ToolShadow",
+					"sid": 989368503392605
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "ImportURL",
+					"sid": 657627032612528,
+					"parameters": {
+						"object": "ToolShadow",
+						"layer": "2",
+						"image-point": "0"
+					}
+				}
+			],
+			"sid": 855082030668024
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 377216425701368,
+					"parameters": {
+						"key": 13
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "ImportURL",
+					"sid": 539776616561197,
+					"parameters": {
+						"instance-variable": "isSelected"
+					}
+				},
+				{
+					"id": "compare-text",
+					"objectClass": "URLInput",
+					"sid": 396912552785737,
+					"parameters": {
+						"text": "\"\"",
+						"case": "case-insensitive"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "ImportURL",
+					"sid": 572187931278382,
+					"parameters": {
+						"instance-variable": "isSelected",
+						"value": "false"
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 862579075524812,
+					"parameters": {
+						"object-to-create": "ImportedImage",
+						"layer": "1",
+						"x": "640",
+						"y": "360"
+					}
+				},
+				{
+					"id": "load-image-from-url",
+					"objectClass": "ImportedImage",
+					"sid": 983460403618097,
+					"parameters": {
+						"uri": "URLInput.Text",
+						"size": "resize-to-image-size",
+						"cross-origin": "anonymous"
+					}
+				}
+			],
+			"sid": 167248552764744
 		},
 		{
 			"eventType": "block",
@@ -2188,6 +2373,23 @@
 				},
 				{
 					"id": "tween-two-properties",
+					"objectClass": "URLInput",
+					"sid": 295262936572180,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "position",
+						"end-x": "URLInput.X-400",
+						"end-y": "URLInput.y",
+						"time": "1",
+						"ease": "easeinoutexpo",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no"
+					}
+				},
+				{
+					"id": "tween-two-properties",
 					"objectClass": "FontSlider",
 					"sid": 994986844747276,
 					"behaviorType": "Tween",
@@ -2283,14 +2485,14 @@
 				{
 					"id": "tween-two-properties",
 					"objectClass": "WidthInput",
-					"sid": 982092408648886,
+					"sid": 519064963953489,
 					"behaviorType": "Tween",
 					"parameters": {
 						"tags": "\"\"",
 						"property": "position",
 						"end-x": "WidthInput.X",
 						"end-y": "16",
-						"time": "1",
+						"time": "0.5",
 						"ease": "easeinoutexpo",
 						"destroy-on-complete": "no",
 						"loop": "no",
@@ -2300,14 +2502,14 @@
 				{
 					"id": "tween-two-properties",
 					"objectClass": "AngleInput",
-					"sid": 494978562474811,
+					"sid": 982466642722577,
 					"behaviorType": "Tween",
 					"parameters": {
 						"tags": "\"\"",
 						"property": "position",
 						"end-x": "AngleInput.X",
 						"end-y": "16",
-						"time": "1",
+						"time": "0.5",
 						"ease": "easeinoutexpo",
 						"destroy-on-complete": "no",
 						"loop": "no",
@@ -2317,14 +2519,14 @@
 				{
 					"id": "tween-two-properties",
 					"objectClass": "HeightInput",
-					"sid": 728601587941782,
+					"sid": 857883771849618,
 					"behaviorType": "Tween",
 					"parameters": {
 						"tags": "\"\"",
 						"property": "position",
 						"end-x": "HeightInput.X",
 						"end-y": "16",
-						"time": "1",
+						"time": "0.5",
 						"ease": "easeinoutexpo",
 						"destroy-on-complete": "no",
 						"loop": "no",
@@ -2334,14 +2536,14 @@
 				{
 					"id": "tween-two-properties",
 					"objectClass": "TextObjectDimensions",
-					"sid": 959759777432766,
+					"sid": 321101409847245,
 					"behaviorType": "Tween",
 					"parameters": {
 						"tags": "\"\"",
 						"property": "position",
 						"end-x": "TextObjectDimensions.X",
 						"end-y": "32",
-						"time": "1",
+						"time": "0.5",
 						"ease": "easeinoutexpo",
 						"destroy-on-complete": "no",
 						"loop": "no",
@@ -2364,14 +2566,14 @@
 				{
 					"id": "tween-two-properties",
 					"objectClass": "FontSlider",
-					"sid": 403398368475418,
+					"sid": 700514498582117,
 					"behaviorType": "Tween",
 					"parameters": {
 						"tags": "\"\"",
 						"property": "position",
 						"end-x": "FontSlider.X",
-						"end-y": "16",
-						"time": "1",
+						"end-y": "22",
+						"time": "0.5",
 						"ease": "easeinoutexpo",
 						"destroy-on-complete": "no",
 						"loop": "no",
@@ -2381,14 +2583,14 @@
 				{
 					"id": "tween-two-properties",
 					"objectClass": "TextFontSize",
-					"sid": 110859705194842,
+					"sid": 359808246874476,
 					"behaviorType": "Tween",
 					"parameters": {
 						"tags": "\"\"",
 						"property": "position",
 						"end-x": "TextFontSize.X",
-						"end-y": "32",
-						"time": "1",
+						"end-y": "38",
+						"time": "0.5",
 						"ease": "easeinoutexpo",
 						"destroy-on-complete": "no",
 						"loop": "no",
@@ -2514,9 +2716,9 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-start-of-layout",
-					"objectClass": "System",
-					"sid": 853898972848486
+					"id": "on-created",
+					"objectClass": "ImportedImage",
+					"sid": 252288932828407
 				}
 			],
 			"actions": [

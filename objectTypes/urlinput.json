@@ -1,0 +1,14 @@
+{
+	"name": "URLInput",
+	"plugin-id": "TextBox",
+	"sid": 297117034217668,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 220490355565597
+		}
+	]
+}

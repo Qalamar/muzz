@@ -238,7 +238,9 @@
 			"CircleObject",
 			"TriangleObject",
 			"AngleInput",
-			"Export"
+			"Export",
+			"ImportURL",
+			"URLInput"
 		],
 		"subfolders": [
 			{

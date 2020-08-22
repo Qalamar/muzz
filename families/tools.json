@@ -19,6 +19,7 @@
 		"Rectangle",
 		"Circle",
 		"Triangle",
-		"Delete"
+		"Delete",
+		"ImportURL"
 	]
 }
