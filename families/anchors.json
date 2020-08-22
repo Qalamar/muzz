@@ -25,6 +25,7 @@
 		"Rectangle",
 		"Circle",
 		"Triangle",
-		"Delete"
+		"Delete",
+		"Export"
 	]
 }

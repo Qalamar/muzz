@@ -237,7 +237,8 @@
 			"Delete",
 			"CircleObject",
 			"TriangleObject",
-			"AngleInput"
+			"AngleInput",
+			"Export"
 		],
 		"subfolders": [
 			{

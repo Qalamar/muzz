@@ -19,7 +19,7 @@
 					"objectClass": "Touch",
 					"sid": 450775025753837,
 					"parameters": {
-						"object": "RectangleObject"
+						"object": "Export"
 					}
 				}
 			],
@@ -28,7 +28,6 @@
 					"id": "snapshot-canvas",
 					"objectClass": "System",
 					"sid": 430442909750907,
-					"disabled": true,
 					"parameters": {
 						"format": "png",
 						"jpeg-quality": "75"
@@ -183,7 +182,36 @@
 					}
 				}
 			],
-			"sid": 182726554256657
+			"sid": 182726554256657,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-by-evaluate",
+							"objectClass": "System",
+							"sid": 648852191288462,
+							"parameters": {
+								"object": "Colors",
+								"expression": "Colors.isSelected"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "Colors",
+							"sid": 964434255214444,
+							"parameters": {
+								"object": "ToolShadow2",
+								"layer": "2",
+								"image-point": "0"
+							}
+						}
+					],
+					"sid": 210882064462581
+				}
+			]
 		},
 		{
 			"eventType": "comment",
@@ -1672,13 +1700,13 @@
 				{
 					"id": "tween-one-property",
 					"objectClass": "Dot1",
-					"sid": 776434735862298,
+					"sid": 510743168131579,
 					"behaviorType": "Tween",
 					"parameters": {
 						"tags": "\"\"",
 						"property": "offsetOpacity",
 						"end-value": "0",
-						"time": "0.5",
+						"time": "0.15",
 						"ease": "easeinoutexpo",
 						"destroy-on-complete": "yes",
 						"loop": "no",

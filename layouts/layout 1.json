@@ -452,8 +452,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 1040,
-						"y": 26,
+						"x": 1008,
+						"y": 16,
 						"width": 150,
 						"height": 22,
 						"originX": 0,
@@ -723,7 +723,7 @@
 					},
 					"uid": 20,
 					"instanceVariables": {
-						"isSelected": false
+						"isSelected": true
 					},
 					"behaviors": {
 						"Anchor": {
@@ -1740,6 +1740,45 @@
 							1,
 							1
 						]
+					}
+				},
+				{
+					"type": "Export",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Default",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 47,
+					"instanceVariables": {},
+					"behaviors": {
+						"Anchor": {
+							"properties": {
+								"left-edge": "window-right",
+								"top-edge": "window-top",
+								"right-edge": "none",
+								"bottom-edge": "none",
+								"enabled": true
+							}
+						}
+					},
+					"world": {
+						"x": 1232,
+						"y": 32,
+						"width": 49,
+						"height": 48,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
 					}
 				}
 			],
