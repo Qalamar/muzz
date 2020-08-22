@@ -5,7 +5,44 @@
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
-	"effectTypes": [],
+	"effectTypes": [
+		{
+			"effectId": "glowhorizontal",
+			"name": "GlowHorizontal"
+		},
+		{
+			"effectId": "glowvertical",
+			"name": "GlowVertical"
+		},
+		{
+			"effectId": "water",
+			"name": "Water"
+		},
+		{
+			"effectId": "swirl",
+			"name": "Swirl"
+		},
+		{
+			"effectId": "sphere",
+			"name": "Sphere"
+		},
+		{
+			"effectId": "vignette",
+			"name": "Vignette"
+		},
+		{
+			"effectId": "blurhorizontal",
+			"name": "BlurHorizontal"
+		},
+		{
+			"effectId": "blurvertical",
+			"name": "BlurVertical"
+		},
+		{
+			"effectId": "crystalball",
+			"name": "CrystalBall"
+		}
+	],
 	"animations": {
 		"items": [
 			{

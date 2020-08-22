@@ -1,36 +1,30 @@
 {
-	"name": "Dot1",
+	"name": "Circle",
 	"plugin-id": "Sprite",
-	"sid": 438271736329819,
+	"sid": 209819255450126,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [
-		{
-			"behaviorId": "Tween",
-			"name": "Tween",
-			"sid": 761618558753719
-		}
-	],
+	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
 		"items": [
 			{
 				"frames": [
 					{
-						"width": 31,
-						"height": 31,
-						"originX": 0.5483870967741935,
-						"originY": 0.3225806451612903,
-						"originalSource": "",
+						"width": 48,
+						"height": 48,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\Users\\Tariq\\Downloads\\Photoshop clone\\slice13.png",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 3663698,
+						"imageSpriteId": 3144687,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 635093832662116,
-				"name": "Animation 1",
+				"sid": 483039418668210,
+				"name": "Default",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,

@@ -1,0 +1,57 @@
+{
+	"name": "TriangleObject",
+	"plugin-id": "Sprite",
+	"sid": 523017125202197,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 154,
+						"height": 133,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\Users\\Tariq\\Downloads\\Photoshop clone\\triangle.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4931825,
+						"collisionPoly": {
+							"points": [
+								0.007518796992481203,
+								0.007518796992481203,
+								0.5,
+								0.007518796992481203,
+								0.9849624060150376,
+								0.007518796992481203,
+								0.9924812030075187,
+								0.5,
+								0.9924812030075187,
+								0.9924812030075187,
+								0.5,
+								0.9924812030075187,
+								0,
+								0.9924812030075187,
+								0,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 939555548050554,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

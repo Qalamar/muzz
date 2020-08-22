@@ -21,6 +21,10 @@
 		"SendBottom",
 		"SendTop",
 		"Lock",
-		"Import"
+		"Import",
+		"Rectangle",
+		"Circle",
+		"Triangle",
+		"Delete"
 	]
 }

@@ -30,7 +30,9 @@
 	],
 	"effectTypes": [],
 	"members": [
-		"Sprite",
-		"ImportedImage"
+		"RectangleObject",
+		"ImportedImage",
+		"CircleObject",
+		"TriangleObject"
 	]
 }

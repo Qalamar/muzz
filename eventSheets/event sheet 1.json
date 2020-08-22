@@ -2,6 +2,16 @@
 	"name": "Event sheet 1",
 	"events": [
 		{
+			"eventType": "variable",
+			"name": "effect",
+			"type": "string",
+			"initialValue": "normal",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 643207558295228
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -9,7 +19,7 @@
 					"objectClass": "Touch",
 					"sid": 450775025753837,
 					"parameters": {
-						"object": "Sprite"
+						"object": "RectangleObject"
 					}
 				}
 			],
@@ -140,6 +150,33 @@
 					"id": "set-css-style",
 					"objectClass": "WidthInput",
 					"sid": 133570407854918,
+					"parameters": {
+						"property-name": "\"text-align\"",
+						"value": "\"center\""
+					}
+				},
+				{
+					"id": "set-css-style",
+					"objectClass": "AngleInput",
+					"sid": 125446810842728,
+					"parameters": {
+						"property-name": "\"box-shadow\"",
+						"value": "\"0 23px 36px rgba(51, 54, 69, 0.16)\""
+					}
+				},
+				{
+					"id": "set-css-style",
+					"objectClass": "AngleInput",
+					"sid": 191238547980465,
+					"parameters": {
+						"property-name": "\"border\"",
+						"value": "\"none\""
+					}
+				},
+				{
+					"id": "set-css-style",
+					"objectClass": "AngleInput",
+					"sid": 388330008109397,
 					"parameters": {
 						"property-name": "\"text-align\"",
 						"value": "\"center\""
@@ -283,8 +320,8 @@
 						},
 						{
 							"id": "set-default-color",
-							"objectClass": "Sprite",
-							"sid": 117303340139363,
+							"objectClass": "CanvasObjects",
+							"sid": 115540967271283,
 							"parameters": {
 								"color": "Colors.ColorValue"
 							}
@@ -459,6 +496,58 @@
 			"eventType": "block",
 			"conditions": [
 				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 151620431253822,
+					"parameters": {
+						"first-value": "int(AngleInput.Text)",
+						"comparison": 4,
+						"second-value": "360"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "AngleInput",
+					"sid": 240868985559852,
+					"parameters": {
+						"text": "\"360\""
+					}
+				}
+			],
+			"sid": 937398279899612
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 749366946040041,
+					"parameters": {
+						"first-value": "int(AngleInput.Text)",
+						"comparison": 2,
+						"second-value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "AngleInput",
+					"sid": 813654968569143,
+					"parameters": {
+						"text": "\"0\""
+					}
+				}
+			],
+			"sid": 548913095104922
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
 					"id": "on-tap-object",
 					"objectClass": "Touch",
 					"sid": 614291434928894,
@@ -551,6 +640,14 @@
 							"sid": 664985084688859,
 							"parameters": {
 								"text": "str(CanvasObjects.Width)"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "AngleInput",
+							"sid": 113611434595384,
+							"parameters": {
+								"text": "str(CanvasObjects.Angle)"
 							}
 						},
 						{
@@ -885,6 +982,43 @@
 				}
 			],
 			"sid": 997956659833736
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-text-changed",
+					"objectClass": "AngleInput",
+					"sid": 614183689334566
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "CanvasObjects",
+					"sid": 442565418981624,
+					"parameters": {
+						"instance-variable": "isSelected"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "tween-one-property",
+					"objectClass": "CanvasObjects",
+					"sid": 409381532369764,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "offsetAngle",
+						"end-value": "int(AngleInput.Text)",
+						"time": "0.5",
+						"ease": "easeinoutexpo",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no"
+					}
+				}
+			],
+			"sid": 302263932830446
 		},
 		{
 			"eventType": "block",
@@ -1313,29 +1447,356 @@
 				{
 					"id": "on-tap-object",
 					"objectClass": "Touch",
-					"sid": 748158028935307,
+					"sid": 774937013974556,
 					"parameters": {
-						"object": "SendBottom"
-					}
-				},
-				{
-					"id": "pick-by-evaluate",
-					"objectClass": "System",
-					"sid": 824034873191695,
-					"parameters": {
-						"object": "CanvasObjects",
-						"expression": "CanvasObjects.isSelected"
+						"object": "Delete"
 					}
 				}
 			],
 			"actions": [
 				{
-					"id": "move-to-bottom",
-					"objectClass": "CanvasObjects",
-					"sid": 506337138170060
+					"id": "destroy",
+					"objectClass": "ToolShadow",
+					"sid": 137596978955108
+				},
+				{
+					"id": "toggle-boolean-instvar",
+					"objectClass": "Delete",
+					"sid": 331732238933445,
+					"disabled": true,
+					"parameters": {
+						"instance-variable": "isSelected"
+					}
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Delete",
+					"sid": 634932534677012,
+					"parameters": {
+						"object": "ToolShadow",
+						"layer": "2",
+						"image-point": "0"
+					}
 				}
 			],
-			"sid": 794496126299596
+			"sid": 718916211397875
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "CanvasObjects",
+					"sid": 668309063119056
+				}
+			],
+			"actions": [
+				{
+					"id": "set-opacity",
+					"objectClass": "CanvasObjects",
+					"sid": 266755873942201,
+					"parameters": {
+						"opacity": "0"
+					}
+				},
+				{
+					"id": "tween-one-property",
+					"objectClass": "CanvasObjects",
+					"sid": 144331336527708,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "offsetOpacity",
+						"end-value": "100",
+						"time": "0.5",
+						"ease": "easeoutexpo",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no"
+					}
+				}
+			],
+			"sid": 902045180530433
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 771520583743898,
+					"parameters": {
+						"object": "Rectangle"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 324099437762205,
+					"parameters": {
+						"object-to-create": "RectangleObject",
+						"layer": "1",
+						"x": "Rectangle.X+200",
+						"y": "Rectangle.Y"
+					}
+				}
+			],
+			"sid": 820772957783196
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 267629300105547,
+					"parameters": {
+						"object": "Circle"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 782992834935553,
+					"parameters": {
+						"object-to-create": "CircleObject",
+						"layer": "1",
+						"x": "Circle.X+200",
+						"y": "Circle.Y"
+					}
+				}
+			],
+			"sid": 620865496194722
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 784637734819676,
+					"parameters": {
+						"object": "Triangle"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 765438761246196,
+					"parameters": {
+						"object-to-create": "TriangleObject",
+						"layer": "1",
+						"x": "Triangle.X+200",
+						"y": "Triangle.Y"
+					}
+				}
+			],
+			"sid": 321763690023408
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-touched-object",
+					"objectClass": "Touch",
+					"sid": 272069246027366,
+					"parameters": {
+						"object": "CanvasObjects"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "CanvasObjects",
+					"sid": 558566811619073,
+					"parameters": {
+						"instance-variable": "isLocked"
+					},
+					"isInverted": true
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Delete",
+					"sid": 770997887145728,
+					"parameters": {
+						"instance-variable": "isSelected"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "tween-one-property",
+					"objectClass": "CanvasObjects",
+					"sid": 760385824193451,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "offsetOpacity",
+						"end-value": "0",
+						"time": "0.5",
+						"ease": "easeinoutexpo",
+						"destroy-on-complete": "yes",
+						"loop": "no",
+						"ping-pong": "no"
+					}
+				}
+			],
+			"sid": 483984145649984
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-touching-object",
+					"objectClass": "Touch",
+					"sid": 651351936048768,
+					"parameters": {
+						"object": "Dot1"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Delete",
+					"sid": 417459214164259,
+					"parameters": {
+						"instance-variable": "isSelected"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "tween-one-property",
+					"objectClass": "Dot1",
+					"sid": 776434735862298,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "offsetOpacity",
+						"end-value": "0",
+						"time": "0.5",
+						"ease": "easeinoutexpo",
+						"destroy-on-complete": "yes",
+						"loop": "no",
+						"ping-pong": "no"
+					}
+				}
+			],
+			"sid": 366201845712273
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-touched-object",
+					"objectClass": "Touch",
+					"sid": 172767612285567,
+					"parameters": {
+						"object": "Text2"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Delete",
+					"sid": 466963444768906,
+					"parameters": {
+						"instance-variable": "isSelected"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Text2",
+					"sid": 751900817555686,
+					"parameters": {
+						"instance-variable": "isLocked"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "tween-one-property",
+					"objectClass": "Text2",
+					"sid": 458730796822173,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "offsetOpacity",
+						"end-value": "0",
+						"time": "0.5",
+						"ease": "easeinoutexpo",
+						"destroy-on-complete": "yes",
+						"loop": "no",
+						"ping-pong": "no"
+					}
+				}
+			],
+			"sid": 494428110579933
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 748158028935307,
+					"parameters": {
+						"object": "SendBottom"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 794496126299596,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-by-evaluate",
+							"objectClass": "System",
+							"sid": 832030384857275,
+							"parameters": {
+								"object": "CanvasObjects",
+								"expression": "CanvasObjects.isSelected"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "move-to-bottom",
+							"objectClass": "CanvasObjects",
+							"sid": 823835554639574
+						}
+					],
+					"sid": 763380683276501
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-by-evaluate",
+							"objectClass": "System",
+							"sid": 119127762459992,
+							"parameters": {
+								"object": "Text2",
+								"expression": "Text2.isSelected"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "move-to-bottom",
+							"objectClass": "Text2",
+							"sid": 686656319431689
+						}
+					],
+					"sid": 741977699208065
+				}
+			]
 		},
 		{
 			"eventType": "block",
@@ -1347,25 +1808,56 @@
 					"parameters": {
 						"object": "SendTop"
 					}
+				}
+			],
+			"actions": [],
+			"sid": 323989651814159,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-by-evaluate",
+							"objectClass": "System",
+							"sid": 348109456043679,
+							"parameters": {
+								"object": "CanvasObjects",
+								"expression": "CanvasObjects.isSelected"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "move-to-top",
+							"objectClass": "CanvasObjects",
+							"sid": 802701445341293
+						}
+					],
+					"sid": 919153879998065
 				},
 				{
-					"id": "pick-by-evaluate",
-					"objectClass": "System",
-					"sid": 934341464031022,
-					"parameters": {
-						"object": "CanvasObjects",
-						"expression": "CanvasObjects.isSelected"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-by-evaluate",
+							"objectClass": "System",
+							"sid": 385653053738652,
+							"parameters": {
+								"object": "Text2",
+								"expression": "Text2.isSelected"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "move-to-top",
+							"objectClass": "Text2",
+							"sid": 422343556656137
+						}
+					],
+					"sid": 116489106411194
 				}
-			],
-			"actions": [
-				{
-					"id": "move-to-top",
-					"objectClass": "CanvasObjects",
-					"sid": 353993337261016
-				}
-			],
-			"sid": 323989651814159
+			]
 		},
 		{
 			"eventType": "block",
@@ -1634,6 +2126,23 @@
 				},
 				{
 					"id": "tween-two-properties",
+					"objectClass": "AngleInput",
+					"sid": 189411424293713,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "position",
+						"end-x": "AngleInput.X",
+						"end-y": "-100",
+						"time": "1",
+						"ease": "easeinoutexpo",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no"
+					}
+				},
+				{
+					"id": "tween-two-properties",
 					"objectClass": "HeightInput",
 					"sid": 535157275754251,
 					"behaviorType": "Tween",
@@ -1762,6 +2271,23 @@
 				},
 				{
 					"id": "tween-two-properties",
+					"objectClass": "AngleInput",
+					"sid": 494978562474811,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "position",
+						"end-x": "AngleInput.X",
+						"end-y": "16",
+						"time": "1",
+						"ease": "easeinoutexpo",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no"
+					}
+				},
+				{
+					"id": "tween-two-properties",
 					"objectClass": "HeightInput",
 					"sid": 728601587941782,
 					"behaviorType": "Tween",
@@ -1843,6 +2369,221 @@
 				}
 			],
 			"sid": 571306275506776
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-selection-changed",
+					"objectClass": "List",
+					"sid": 842817852025689
+				}
+			],
+			"actions": [
+				{
+					"id": "set-effect-enabled",
+					"objectClass": "ImportedImage",
+					"sid": 909419899644639,
+					"parameters": {
+						"mode": "disable",
+						"effect": "\"Vignette\""
+					}
+				},
+				{
+					"id": "set-effect-enabled",
+					"objectClass": "ImportedImage",
+					"sid": 600349326122885,
+					"parameters": {
+						"mode": "disable",
+						"effect": "\"GlowHorizontal\""
+					}
+				},
+				{
+					"id": "set-effect-enabled",
+					"objectClass": "ImportedImage",
+					"sid": 488262759507139,
+					"parameters": {
+						"mode": "disable",
+						"effect": "\"GlowVertical\""
+					}
+				},
+				{
+					"id": "set-effect-enabled",
+					"objectClass": "ImportedImage",
+					"sid": 494842759770384,
+					"parameters": {
+						"mode": "disable",
+						"effect": "\"Sphere\""
+					}
+				},
+				{
+					"id": "set-effect-enabled",
+					"objectClass": "ImportedImage",
+					"sid": 342116280841658,
+					"parameters": {
+						"mode": "disable",
+						"effect": "\"CrystalBall\""
+					}
+				},
+				{
+					"id": "set-effect-enabled",
+					"objectClass": "ImportedImage",
+					"sid": 654539985126429,
+					"parameters": {
+						"mode": "disable",
+						"effect": "\"BlurHorizontal\""
+					}
+				},
+				{
+					"id": "set-effect-enabled",
+					"objectClass": "ImportedImage",
+					"sid": 848757759201890,
+					"parameters": {
+						"mode": "disable",
+						"effect": "\"BlurVertical\""
+					}
+				},
+				{
+					"id": "set-effect-enabled",
+					"objectClass": "ImportedImage",
+					"sid": 891098292076992,
+					"parameters": {
+						"mode": "disable",
+						"effect": "\"Swirl\""
+					}
+				},
+				{
+					"id": "set-effect-enabled",
+					"objectClass": "ImportedImage",
+					"sid": 138066880667907,
+					"parameters": {
+						"mode": "disable",
+						"effect": "\"Water\""
+					}
+				},
+				{
+					"id": "set-effect-enabled",
+					"objectClass": "ImportedImage",
+					"sid": 961307739150483,
+					"parameters": {
+						"mode": "disable",
+						"effect": "\"Vignette\""
+					}
+				},
+				{
+					"id": "set-effect-enabled",
+					"objectClass": "ImportedImage",
+					"sid": 199478007677318,
+					"parameters": {
+						"mode": "enable",
+						"effect": "List.SelectedText"
+					}
+				}
+			],
+			"sid": 710927175015281
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 853898972848486
+				}
+			],
+			"actions": [
+				{
+					"id": "set-effect-enabled",
+					"objectClass": "ImportedImage",
+					"sid": 897112945828072,
+					"parameters": {
+						"mode": "disable",
+						"effect": "\"GlowHorizontal\""
+					}
+				},
+				{
+					"id": "set-effect-enabled",
+					"objectClass": "ImportedImage",
+					"sid": 311186174071712,
+					"parameters": {
+						"mode": "disable",
+						"effect": "\"GlowVertical\""
+					}
+				},
+				{
+					"id": "set-effect-enabled",
+					"objectClass": "ImportedImage",
+					"sid": 292092273810138,
+					"parameters": {
+						"mode": "disable",
+						"effect": "\"Sphere\""
+					}
+				},
+				{
+					"id": "set-effect-enabled",
+					"objectClass": "ImportedImage",
+					"sid": 674614932921005,
+					"parameters": {
+						"mode": "disable",
+						"effect": "\"CrystalBall\""
+					}
+				},
+				{
+					"id": "set-effect-enabled",
+					"objectClass": "ImportedImage",
+					"sid": 270276846842636,
+					"parameters": {
+						"mode": "disable",
+						"effect": "\"BlurHorizontal\""
+					}
+				},
+				{
+					"id": "set-effect-enabled",
+					"objectClass": "ImportedImage",
+					"sid": 640714880440185,
+					"parameters": {
+						"mode": "disable",
+						"effect": "\"BlurVertical\""
+					}
+				},
+				{
+					"id": "set-effect-enabled",
+					"objectClass": "ImportedImage",
+					"sid": 249576429448277,
+					"parameters": {
+						"mode": "disable",
+						"effect": "\"Swirl\""
+					}
+				},
+				{
+					"id": "set-effect-enabled",
+					"objectClass": "ImportedImage",
+					"sid": 622453965186333,
+					"parameters": {
+						"mode": "disable",
+						"effect": "\"Water\""
+					}
+				},
+				{
+					"id": "set-effect-enabled",
+					"objectClass": "ImportedImage",
+					"sid": 199969601842075,
+					"parameters": {
+						"mode": "disable",
+						"effect": "\"Vignette\""
+					}
+				},
+				{
+					"id": "set-effect-enabled",
+					"objectClass": "ImportedImage",
+					"sid": 327526635832802,
+					"parameters": {
+						"mode": "enable",
+						"effect": "List.SelectedText"
+					}
+				}
+			],
+			"sid": 302096376304878
 		}
 	],
 	"sid": 389047456855775

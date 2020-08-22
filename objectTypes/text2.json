@@ -22,6 +22,11 @@
 			"behaviorId": "DragnDrop",
 			"name": "DragDrop",
 			"sid": 400434376479976
+		},
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 656750358605366
 		}
 	],
 	"effectTypes": []

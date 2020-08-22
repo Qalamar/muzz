@@ -1,0 +1,14 @@
+{
+	"name": "AngleInput",
+	"plugin-id": "TextBox",
+	"sid": 274735655997939,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 848914111561588
+		}
+	]
+}

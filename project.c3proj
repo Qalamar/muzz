@@ -133,12 +133,76 @@
 			"author": "Brad Larson",
 			"version": "r210.2",
 			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "glowhorizontal",
+			"name": "Glow horizontal",
+			"author": "Scirra",
+			"version": "r210.2",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "glowvertical",
+			"name": "Glow vertical",
+			"author": "Scirra",
+			"version": "r210.2",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "water",
+			"name": "Water",
+			"author": "Viktor Korsun",
+			"version": "r210.2",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "swirl",
+			"name": "Swirl",
+			"author": "Brad Larson",
+			"version": "r210.2",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "vignette",
+			"name": "Vignette",
+			"author": "Brad Larson",
+			"version": "r210.2",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "blurhorizontal",
+			"name": "Blur horizontal",
+			"author": "Scirra",
+			"version": "r210.2",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "blurvertical",
+			"name": "Blur vertical",
+			"author": "Scirra",
+			"version": "r210.2",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "crystalball",
+			"name": "Crystal ball",
+			"author": "Brad Larson",
+			"version": "r210.2",
+			"bundled": false
 		}
 	],
 	"uniqueId": "qvlq90kpltx",
 	"objectTypes": {
 		"items": [
-			"Sprite",
+			"RectangleObject",
 			"Touch",
 			"Browser",
 			"AJAX",
@@ -166,7 +230,14 @@
 			"SendTop",
 			"Lock",
 			"Import",
-			"ImportedImage"
+			"ImportedImage",
+			"Rectangle",
+			"Circle",
+			"Triangle",
+			"Delete",
+			"CircleObject",
+			"TriangleObject",
+			"AngleInput"
 		],
 		"subfolders": [
 			{

@@ -1,7 +1,7 @@
 {
-	"name": "Sprite",
+	"name": "Triangle",
 	"plugin-id": "Sprite",
-	"sid": 839498435058567,
+	"sid": 392406304711749,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -11,20 +11,20 @@
 			{
 				"frames": [
 					{
-						"width": 250,
-						"height": 250,
+						"width": 48,
+						"height": 48,
 						"originX": 0.5,
 						"originY": 0.5,
-						"originalSource": "",
+						"originalSource": "C:\\Users\\Tariq\\Downloads\\Photoshop clone\\slice14.png",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 5047804,
+						"imageSpriteId": 7238211,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 459719952550508,
-				"name": "Animation 1",
+				"sid": 433721546589670,
+				"name": "Default",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,
