@@ -1,0 +1,14 @@
+{
+	"name": "Inputs",
+	"plugin-id": "TextBox",
+	"sid": 760056936519186,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"members": [
+		"HeightInput",
+		"AngleInput",
+		"TextTool",
+		"URLInput",
+		"WidthInput"
+	]
+}

@@ -112,16 +112,16 @@
 		},
 		{
 			"type": "behavior",
-			"id": "DragnDrop",
-			"name": "Drag & Drop",
+			"id": "Anchor",
+			"name": "Anchor",
 			"author": "Scirra",
 			"version": "r210.2",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
-			"id": "Anchor",
-			"name": "Anchor",
+			"id": "DragnDrop",
+			"name": "Drag & Drop",
 			"author": "Scirra",
 			"version": "r210.2",
 			"bundled": false
@@ -240,7 +240,10 @@
 			"AngleInput",
 			"Export",
 			"ImportURL",
-			"URLInput"
+			"URLInput",
+			"Clear",
+			"Overlay",
+			"OverlayHelp"
 		],
 		"subfolders": [
 			{
@@ -261,7 +264,8 @@
 			"ToolUI",
 			"Anchors",
 			"Tools",
-			"CanvasObjects"
+			"CanvasObjects",
+			"Inputs"
 		],
 		"subfolders": []
 	},

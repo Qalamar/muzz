@@ -27,6 +27,7 @@
 		"Triangle",
 		"Delete",
 		"Export",
-		"ImportURL"
+		"ImportURL",
+		"Clear"
 	]
 }

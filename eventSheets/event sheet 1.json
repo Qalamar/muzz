@@ -25,12 +25,116 @@
 			],
 			"actions": [
 				{
+					"id": "set-visible",
+					"objectClass": "Inputs",
+					"sid": 864770964327053,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Tools",
+					"sid": 389744294215703,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "ToolUI",
+					"sid": 717930779734120,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Anchors",
+					"sid": 985447950706897,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "List",
+					"sid": 607822422202751,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Colors",
+					"sid": 708086063578415,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
 					"id": "snapshot-canvas",
 					"objectClass": "System",
-					"sid": 430442909750907,
+					"sid": 337084012183619,
 					"parameters": {
 						"format": "png",
 						"jpeg-quality": "75"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 846763480847676,
+					"parameters": {
+						"seconds": "0.1"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Inputs",
+					"sid": 556140732190882,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Tools",
+					"sid": 551397791132038,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "ToolUI",
+					"sid": 135446041752315,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Anchors",
+					"sid": 190359265480908,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "List",
+					"sid": 226839180040864,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Colors",
+					"sid": 203854953831188,
+					"parameters": {
+						"visibility": "visible"
 					}
 				}
 			],
@@ -71,7 +175,195 @@
 				{
 					"id": "create-object",
 					"objectClass": "System",
-					"sid": 612615852008700,
+					"sid": 740905319416768,
+					"parameters": {
+						"object-to-create": "ImportedImage",
+						"layer": "1",
+						"x": "640",
+						"y": "360"
+					}
+				}
+			],
+			"sid": 540760166282774,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-all",
+							"objectClass": "System",
+							"sid": 646866718145803,
+							"parameters": {
+								"object": "ImportedImage"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "ImportedImage",
+							"sid": 389851712473660,
+							"parameters": {
+								"instance-variable": "isSelected",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 889019937336694
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-last-created",
+							"objectClass": "System",
+							"sid": 959721410463367,
+							"parameters": {
+								"object": "ImportedImage"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "ImportedImage",
+							"sid": 275529353942853,
+							"parameters": {
+								"instance-variable": "isSelected",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "ImportedImage",
+							"sid": 461839945079988,
+							"parameters": {
+								"frame-number": "ImportedImage.Count+1"
+							}
+						},
+						{
+							"id": "load-image-from-url",
+							"objectClass": "ImportedImage",
+							"sid": 719952105584116,
+							"parameters": {
+								"uri": "FileChooser.FileURLAt(0)",
+								"size": "resize-to-image-size",
+								"cross-origin": "anonymous"
+							}
+						}
+					],
+					"sid": 198508197240353
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 911075350431049,
+					"parameters": {
+						"object": "ImportURL"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "ImportURL",
+					"sid": 973508088579443,
+					"parameters": {
+						"instance-variable": "isSelected",
+						"value": "true"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "ToolShadow",
+					"sid": 989368503392605
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "ImportURL",
+					"sid": 657627032612528,
+					"parameters": {
+						"object": "ToolShadow",
+						"layer": "2",
+						"image-point": "0"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 675652868541595,
+					"parameters": {
+						"seconds": "0.1"
+					}
+				},
+				{
+					"id": "tween-two-properties",
+					"objectClass": "URLInput",
+					"sid": 227132277712082,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "position",
+						"end-x": "20",
+						"end-y": "URLInput.Y",
+						"time": "1",
+						"ease": "easeinoutexpo",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "URLInput",
+					"sid": 365903092211945,
+					"parameters": {
+						"text": "\"\""
+					}
+				}
+			],
+			"sid": 855082030668024
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 377216425701368,
+					"parameters": {
+						"key": 13
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "ImportURL",
+					"sid": 539776616561197,
+					"parameters": {
+						"instance-variable": "isSelected"
+					}
+				},
+				{
+					"id": "compare-text",
+					"objectClass": "URLInput",
+					"sid": 396912552785737,
+					"parameters": {
+						"text": "\"\"",
+						"case": "case-insensitive"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 944024507250171,
 					"parameters": {
 						"object-to-create": "ImportedImage",
 						"layer": "1",
@@ -80,17 +372,95 @@
 					}
 				},
 				{
-					"id": "load-image-from-url",
-					"objectClass": "ImportedImage",
-					"sid": 689142438093825,
+					"id": "set-boolean-instvar",
+					"objectClass": "ImportURL",
+					"sid": 464319721104052,
 					"parameters": {
-						"uri": "FileChooser.FileURLAt(0)",
-						"size": "resize-to-image-size",
-						"cross-origin": "anonymous"
+						"instance-variable": "isSelected",
+						"value": "false"
 					}
 				}
 			],
-			"sid": 540760166282774
+			"sid": 167248552764744,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-all",
+							"objectClass": "System",
+							"sid": 453088314997865,
+							"parameters": {
+								"object": "ImportedImage"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "ImportedImage",
+							"sid": 539553928772962,
+							"parameters": {
+								"instance-variable": "isSelected",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 577242098004404
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-last-created",
+							"objectClass": "System",
+							"sid": 860416317609047,
+							"parameters": {
+								"object": "ImportedImage"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "ImportedImage",
+							"sid": 778164912840714,
+							"parameters": {
+								"instance-variable": "isSelected",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "ImportedImage",
+							"sid": 714645107092940,
+							"parameters": {
+								"frame-number": "ImportedImage.Count+1"
+							}
+						},
+						{
+							"id": "load-image-from-url",
+							"objectClass": "ImportedImage",
+							"sid": 789942039716662,
+							"parameters": {
+								"uri": "URLInput.Text",
+								"size": "resize-to-image-size",
+								"cross-origin": "anonymous"
+							}
+						},
+						{
+							"callFunction": "hideToolkits",
+							"sid": 912287664217235
+						},
+						{
+							"id": "destroy",
+							"objectClass": "ToolShadow",
+							"sid": 198380375513524
+						}
+					],
+					"sid": 246698276548226
+				}
+			]
 		},
 		{
 			"eventType": "block",
@@ -655,14 +1025,6 @@
 					"parameters": {
 						"object": "CanvasObjects"
 					}
-				},
-				{
-					"id": "is-touching-object",
-					"objectClass": "Touch",
-					"sid": 219138133666431,
-					"parameters": {
-						"object": "CanvasObjects"
-					}
 				}
 			],
 			"actions": [],
@@ -831,14 +1193,6 @@
 					"id": "on-touched-object",
 					"objectClass": "Touch",
 					"sid": 900039299956240,
-					"parameters": {
-						"object": "Text2"
-					}
-				},
-				{
-					"id": "is-touching-object",
-					"objectClass": "Touch",
-					"sid": 543007694175297,
 					"parameters": {
 						"object": "Text2"
 					}
@@ -1327,38 +1681,8 @@
 							}
 						},
 						{
-							"id": "tween-two-properties",
-							"objectClass": "FontSlider",
-							"sid": 517279647591692,
-							"behaviorType": "Tween",
-							"parameters": {
-								"tags": "\"\"",
-								"property": "position",
-								"end-x": "FontSlider.X",
-								"end-y": "16",
-								"time": "1",
-								"ease": "easeinoutexpo",
-								"destroy-on-complete": "no",
-								"loop": "no",
-								"ping-pong": "no"
-							}
-						},
-						{
-							"id": "tween-two-properties",
-							"objectClass": "TextFontSize",
-							"sid": 799191606490485,
-							"behaviorType": "Tween",
-							"parameters": {
-								"tags": "\"\"",
-								"property": "position",
-								"end-x": "TextFontSize.X",
-								"end-y": "32",
-								"time": "1",
-								"ease": "easeinoutexpo",
-								"destroy-on-complete": "no",
-								"loop": "no",
-								"ping-pong": "no"
-							}
+							"callFunction": "showTextToolkit",
+							"sid": 135167603174138
 						},
 						{
 							"id": "set-text",
@@ -1490,118 +1814,6 @@
 				{
 					"id": "on-tap-object",
 					"objectClass": "Touch",
-					"sid": 911075350431049,
-					"parameters": {
-						"object": "ImportURL"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "tween-two-properties",
-					"objectClass": "URLInput",
-					"sid": 102663103729501,
-					"behaviorType": "Tween",
-					"parameters": {
-						"tags": "\"\"",
-						"property": "position",
-						"end-x": "80",
-						"end-y": "URLInput.Y",
-						"time": "1",
-						"ease": "easeinoutexpo",
-						"destroy-on-complete": "no",
-						"loop": "no",
-						"ping-pong": "no"
-					}
-				},
-				{
-					"id": "destroy",
-					"objectClass": "ToolShadow",
-					"sid": 989368503392605
-				},
-				{
-					"id": "spawn-another-object",
-					"objectClass": "ImportURL",
-					"sid": 657627032612528,
-					"parameters": {
-						"object": "ToolShadow",
-						"layer": "2",
-						"image-point": "0"
-					}
-				}
-			],
-			"sid": 855082030668024
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-key-pressed",
-					"objectClass": "Keyboard",
-					"sid": 377216425701368,
-					"parameters": {
-						"key": 13
-					}
-				},
-				{
-					"id": "is-boolean-instance-variable-set",
-					"objectClass": "ImportURL",
-					"sid": 539776616561197,
-					"parameters": {
-						"instance-variable": "isSelected"
-					}
-				},
-				{
-					"id": "compare-text",
-					"objectClass": "URLInput",
-					"sid": 396912552785737,
-					"parameters": {
-						"text": "\"\"",
-						"case": "case-insensitive"
-					},
-					"isInverted": true
-				}
-			],
-			"actions": [
-				{
-					"id": "set-boolean-instvar",
-					"objectClass": "ImportURL",
-					"sid": 572187931278382,
-					"parameters": {
-						"instance-variable": "isSelected",
-						"value": "false"
-					}
-				},
-				{
-					"id": "create-object",
-					"objectClass": "System",
-					"sid": 862579075524812,
-					"parameters": {
-						"object-to-create": "ImportedImage",
-						"layer": "1",
-						"x": "640",
-						"y": "360"
-					}
-				},
-				{
-					"id": "load-image-from-url",
-					"objectClass": "ImportedImage",
-					"sid": 983460403618097,
-					"parameters": {
-						"uri": "URLInput.Text",
-						"size": "resize-to-image-size",
-						"cross-origin": "anonymous"
-					}
-				}
-			],
-			"sid": 167248552764744
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-tap-object",
-					"objectClass": "Touch",
 					"sid": 838060573730718,
 					"parameters": {
 						"object": "Brush"
@@ -1693,6 +1905,47 @@
 				}
 			],
 			"sid": 718916211397875
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 601716776230529,
+					"parameters": {
+						"object": "Clear"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "ToolShadow",
+					"sid": 399639547988896
+				},
+				{
+					"id": "destroy",
+					"objectClass": "CanvasObjects",
+					"sid": 210015386174632
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Dot1",
+					"sid": 238759669776620
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Text2",
+					"sid": 986289792044972
+				},
+				{
+					"id": "destroy",
+					"objectClass": "ImportedImage",
+					"sid": 442103822541987
+				}
+			],
+			"sid": 806784266739150
 		},
 		{
 			"eventType": "block",
@@ -2188,6 +2441,15 @@
 					"id": "is-in-touch",
 					"objectClass": "Touch",
 					"sid": 891171212983551
+				},
+				{
+					"id": "is-touching-object",
+					"objectClass": "Touch",
+					"sid": 195972314002450,
+					"parameters": {
+						"object": "ToolUI"
+					},
+					"isInverted": true
 				}
 			],
 			"actions": [
@@ -2222,6 +2484,27 @@
 				}
 			],
 			"sid": 763645696862476
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-touched-object",
+					"objectClass": "Touch",
+					"sid": 187448786015866,
+					"parameters": {
+						"object": "Anchors"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "ToolShadow",
+					"sid": 676222557619941
+				}
+			],
+			"sid": 517947502467821
 		},
 		{
 			"eventType": "block",
@@ -2566,13 +2849,13 @@
 				{
 					"id": "tween-two-properties",
 					"objectClass": "FontSlider",
-					"sid": 700514498582117,
+					"sid": 525235163649258,
 					"behaviorType": "Tween",
 					"parameters": {
 						"tags": "\"\"",
 						"property": "position",
 						"end-x": "FontSlider.X",
-						"end-y": "22",
+						"end-y": "26",
 						"time": "0.5",
 						"ease": "easeinoutexpo",
 						"destroy-on-complete": "no",
@@ -2583,13 +2866,13 @@
 				{
 					"id": "tween-two-properties",
 					"objectClass": "TextFontSize",
-					"sid": 359808246874476,
+					"sid": 593872156957547,
 					"behaviorType": "Tween",
 					"parameters": {
 						"tags": "\"\"",
 						"property": "position",
 						"end-x": "TextFontSize.X",
-						"end-y": "38",
+						"end-y": "40",
 						"time": "0.5",
 						"ease": "easeinoutexpo",
 						"destroy-on-complete": "no",
@@ -2607,6 +2890,15 @@
 					"id": "on-selection-changed",
 					"objectClass": "List",
 					"sid": 842817852025689
+				},
+				{
+					"id": "pick-by-evaluate",
+					"objectClass": "System",
+					"sid": 212918972761461,
+					"parameters": {
+						"object": "ImportedImage",
+						"expression": "ImportedImage.isSelected"
+					}
 				}
 			],
 			"actions": [
