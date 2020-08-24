@@ -2136,20 +2136,9 @@
 			],
 			"actions": [
 				{
-					"id": "tween-one-property",
+					"id": "destroy",
 					"objectClass": "Dot1",
-					"sid": 510743168131579,
-					"behaviorType": "Tween",
-					"parameters": {
-						"tags": "\"\"",
-						"property": "offsetOpacity",
-						"end-value": "0",
-						"time": "0.15",
-						"ease": "easeinoutexpo",
-						"destroy-on-complete": "yes",
-						"loop": "no",
-						"ping-pong": "no"
-					}
+					"sid": 213405567685299
 				}
 			],
 			"sid": 366201845712273
@@ -2606,13 +2595,13 @@
 				{
 					"id": "tween-two-properties",
 					"objectClass": "WidthInput",
-					"sid": 985040826733371,
+					"sid": 714890690278997,
 					"behaviorType": "Tween",
 					"parameters": {
 						"tags": "\"\"",
 						"property": "position",
 						"end-x": "WidthInput.X",
-						"end-y": "-100",
+						"end-y": "List.Y-200",
 						"time": "1",
 						"ease": "easeinoutexpo",
 						"destroy-on-complete": "no",
@@ -2623,13 +2612,13 @@
 				{
 					"id": "tween-two-properties",
 					"objectClass": "AngleInput",
-					"sid": 189411424293713,
+					"sid": 763801090108491,
 					"behaviorType": "Tween",
 					"parameters": {
 						"tags": "\"\"",
 						"property": "position",
 						"end-x": "AngleInput.X",
-						"end-y": "-100",
+						"end-y": "List.Y-200",
 						"time": "1",
 						"ease": "easeinoutexpo",
 						"destroy-on-complete": "no",
@@ -2640,13 +2629,13 @@
 				{
 					"id": "tween-two-properties",
 					"objectClass": "HeightInput",
-					"sid": 535157275754251,
+					"sid": 836528303028306,
 					"behaviorType": "Tween",
 					"parameters": {
 						"tags": "\"\"",
 						"property": "position",
 						"end-x": "HeightInput.X",
-						"end-y": "-100",
+						"end-y": "List.Y-200",
 						"time": "1",
 						"ease": "easeinoutexpo",
 						"destroy-on-complete": "no",
@@ -2674,13 +2663,13 @@
 				{
 					"id": "tween-two-properties",
 					"objectClass": "FontSlider",
-					"sid": 994986844747276,
+					"sid": 979893676309027,
 					"behaviorType": "Tween",
 					"parameters": {
 						"tags": "\"\"",
 						"property": "position",
 						"end-x": "FontSlider.X",
-						"end-y": "-100",
+						"end-y": "List.Y-200",
 						"time": "1",
 						"ease": "easeinoutexpo",
 						"destroy-on-complete": "no",
@@ -2691,13 +2680,13 @@
 				{
 					"id": "tween-two-properties",
 					"objectClass": "TextFontSize",
-					"sid": 964418747070809,
+					"sid": 116040092112211,
 					"behaviorType": "Tween",
 					"parameters": {
 						"tags": "\"\"",
 						"property": "position",
 						"end-x": "TextFontSize.X",
-						"end-y": "-100",
+						"end-y": "List.Y-200",
 						"time": "1",
 						"ease": "easeinoutexpo",
 						"destroy-on-complete": "no",
@@ -2708,13 +2697,13 @@
 				{
 					"id": "tween-two-properties",
 					"objectClass": "TextObjectDimensions",
-					"sid": 250636443211626,
+					"sid": 999871758274269,
 					"behaviorType": "Tween",
 					"parameters": {
 						"tags": "\"\"",
 						"property": "position",
 						"end-x": "TextObjectDimensions.X",
-						"end-y": "-100",
+						"end-y": "List.Y-200",
 						"time": "1",
 						"ease": "easeinoutexpo",
 						"destroy-on-complete": "no",
@@ -2768,13 +2757,13 @@
 				{
 					"id": "tween-two-properties",
 					"objectClass": "WidthInput",
-					"sid": 519064963953489,
+					"sid": 383295763499603,
 					"behaviorType": "Tween",
 					"parameters": {
 						"tags": "\"\"",
 						"property": "position",
 						"end-x": "WidthInput.X",
-						"end-y": "16",
+						"end-y": "List.Y",
 						"time": "0.5",
 						"ease": "easeinoutexpo",
 						"destroy-on-complete": "no",
@@ -2785,13 +2774,13 @@
 				{
 					"id": "tween-two-properties",
 					"objectClass": "AngleInput",
-					"sid": 982466642722577,
+					"sid": 158613143300938,
 					"behaviorType": "Tween",
 					"parameters": {
 						"tags": "\"\"",
 						"property": "position",
 						"end-x": "AngleInput.X",
-						"end-y": "16",
+						"end-y": "List.Y",
 						"time": "0.5",
 						"ease": "easeinoutexpo",
 						"destroy-on-complete": "no",
@@ -2802,13 +2791,13 @@
 				{
 					"id": "tween-two-properties",
 					"objectClass": "HeightInput",
-					"sid": 857883771849618,
+					"sid": 603132992610117,
 					"behaviorType": "Tween",
 					"parameters": {
 						"tags": "\"\"",
 						"property": "position",
 						"end-x": "HeightInput.X",
-						"end-y": "16",
+						"end-y": "List.Y",
 						"time": "0.5",
 						"ease": "easeinoutexpo",
 						"destroy-on-complete": "no",
@@ -2819,13 +2808,13 @@
 				{
 					"id": "tween-two-properties",
 					"objectClass": "TextObjectDimensions",
-					"sid": 321101409847245,
+					"sid": 339517861546818,
 					"behaviorType": "Tween",
 					"parameters": {
 						"tags": "\"\"",
 						"property": "position",
 						"end-x": "TextObjectDimensions.X",
-						"end-y": "32",
+						"end-y": "List.Y+16",
 						"time": "0.5",
 						"ease": "easeinoutexpo",
 						"destroy-on-complete": "no",
@@ -2849,13 +2838,13 @@
 				{
 					"id": "tween-two-properties",
 					"objectClass": "FontSlider",
-					"sid": 525235163649258,
+					"sid": 312464711131561,
 					"behaviorType": "Tween",
 					"parameters": {
 						"tags": "\"\"",
 						"property": "position",
 						"end-x": "FontSlider.X",
-						"end-y": "26",
+						"end-y": "List.Y",
 						"time": "0.5",
 						"ease": "easeinoutexpo",
 						"destroy-on-complete": "no",
@@ -2866,13 +2855,13 @@
 				{
 					"id": "tween-two-properties",
 					"objectClass": "TextFontSize",
-					"sid": 593872156957547,
+					"sid": 194812131249626,
 					"behaviorType": "Tween",
 					"parameters": {
 						"tags": "\"\"",
 						"property": "position",
 						"end-x": "TextFontSize.X",
-						"end-y": "40",
+						"end-y": "List.Y+16",
 						"time": "0.5",
 						"ease": "easeinoutexpo",
 						"destroy-on-complete": "no",
@@ -3106,6 +3095,102 @@
 				}
 			],
 			"sid": 302096376304878
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-any-touch-start",
+					"objectClass": "Touch",
+					"sid": 467780373459359
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 998948591511894,
+					"parameters": {
+						"first-value": "LayerOpacity(3)",
+						"comparison": 0,
+						"second-value": "100"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "tween-value",
+					"objectClass": "TextFontSize",
+					"sid": 411700267108101,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"tut\"",
+						"start-value": "100",
+						"end-value": "0",
+						"time": "0.4",
+						"ease": "easeinoutexpo",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no"
+					}
+				}
+			],
+			"sid": 774640846404635
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-playing",
+					"objectClass": "TextFontSize",
+					"sid": 861659781954413,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"tut\""
+					}
+				},
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 463679162301095
+				}
+			],
+			"actions": [
+				{
+					"id": "set-layer-opacity",
+					"objectClass": "System",
+					"sid": 617266711582132,
+					"parameters": {
+						"layer": "3",
+						"opacity": "100-(100*TextFontSize.Tween.Progress(\"tut\"))"
+					}
+				}
+			],
+			"sid": 241030386662210
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tweens-finished",
+					"objectClass": "TextFontSize",
+					"sid": 343568534401300,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"tut\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-layer-opacity",
+					"objectClass": "System",
+					"sid": 277327008595318,
+					"parameters": {
+						"layer": "3",
+						"opacity": "0"
+					}
+				}
+			],
+			"sid": 807318167806517
 		}
 	],
 	"sid": 389047456855775

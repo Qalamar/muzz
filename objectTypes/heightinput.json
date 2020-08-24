@@ -9,6 +9,11 @@
 			"behaviorId": "Tween",
 			"name": "Tween",
 			"sid": 263574637446198
+		},
+		{
+			"behaviorId": "Anchor",
+			"name": "Anchor",
+			"sid": 801652346806293
 		}
 	]
 }
