@@ -615,6 +615,33 @@
 						"property-name": "\"text-align\"",
 						"value": "\"center\""
 					}
+				},
+				{
+					"id": "set-css-style",
+					"objectClass": "OpacityInput",
+					"sid": 680336276085158,
+					"parameters": {
+						"property-name": "\"box-shadow\"",
+						"value": "\"0 23px 36px rgba(51, 54, 69, 0.16)\""
+					}
+				},
+				{
+					"id": "set-css-style",
+					"objectClass": "OpacityInput",
+					"sid": 175715855555650,
+					"parameters": {
+						"property-name": "\"border\"",
+						"value": "\"none\""
+					}
+				},
+				{
+					"id": "set-css-style",
+					"objectClass": "OpacityInput",
+					"sid": 961801095656247,
+					"parameters": {
+						"property-name": "\"text-align\"",
+						"value": "\"center\""
+					}
 				}
 			],
 			"sid": 182726554256657,
@@ -1106,6 +1133,14 @@
 							}
 						},
 						{
+							"id": "set-text",
+							"objectClass": "OpacityInput",
+							"sid": 352740148569874,
+							"parameters": {
+								"text": "str(CanvasObjects.Opacity)"
+							}
+						},
+						{
 							"callFunction": "showObjectToolkit",
 							"sid": 628668188039368
 						}
@@ -1466,6 +1501,43 @@
 				}
 			],
 			"sid": 302263932830446
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-text-changed",
+					"objectClass": "OpacityInput",
+					"sid": 815997692281904
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "CanvasObjects",
+					"sid": 831600045382549,
+					"parameters": {
+						"instance-variable": "isSelected"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "tween-one-property",
+					"objectClass": "CanvasObjects",
+					"sid": 214457172783219,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "offsetOpacity",
+						"end-value": "int(OpacityInput.Text)",
+						"time": "0.3",
+						"ease": "easeinoutexpo",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no"
+					}
+				}
+			],
+			"sid": 172983299720063
 		},
 		{
 			"eventType": "block",
@@ -2628,6 +2700,23 @@
 				},
 				{
 					"id": "tween-two-properties",
+					"objectClass": "OpacityInput",
+					"sid": 566693875532297,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "position",
+						"end-x": "OpacityInput.X",
+						"end-y": "List.Y-200",
+						"time": "1",
+						"ease": "easeinoutexpo",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no"
+					}
+				},
+				{
+					"id": "tween-two-properties",
 					"objectClass": "HeightInput",
 					"sid": 836528303028306,
 					"behaviorType": "Tween",
@@ -2780,6 +2869,23 @@
 						"tags": "\"\"",
 						"property": "position",
 						"end-x": "AngleInput.X",
+						"end-y": "List.Y",
+						"time": "0.5",
+						"ease": "easeinoutexpo",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no"
+					}
+				},
+				{
+					"id": "tween-two-properties",
+					"objectClass": "OpacityInput",
+					"sid": 838282677770759,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "position",
+						"end-x": "OpacityInput.X",
 						"end-y": "List.Y",
 						"time": "0.5",
 						"ease": "easeinoutexpo",
@@ -3131,6 +3237,10 @@
 						"loop": "no",
 						"ping-pong": "no"
 					}
+				},
+				{
+					"callFunction": "hideToolkits",
+					"sid": 368022549520087
 				}
 			],
 			"sid": 774640846404635

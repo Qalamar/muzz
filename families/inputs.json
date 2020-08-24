@@ -9,6 +9,7 @@
 		"AngleInput",
 		"TextTool",
 		"URLInput",
-		"WidthInput"
+		"WidthInput",
+		"OpacityInput"
 	]
 }

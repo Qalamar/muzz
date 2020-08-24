@@ -1,0 +1,19 @@
+{
+	"name": "OpacityInput",
+	"plugin-id": "TextBox",
+	"sid": 159016851332553,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 575814816398887
+		},
+		{
+			"behaviorId": "Anchor",
+			"name": "Anchor",
+			"sid": 966829379110826
+		}
+	]
+}

@@ -243,7 +243,8 @@
 			"URLInput",
 			"Clear",
 			"Overlay",
-			"OverlayHelp"
+			"OverlayHelp",
+			"OpacityInput"
 		],
 		"subfolders": [
 			{
@@ -417,7 +418,7 @@
 		"sampling": "trilinear",
 		"downscaling": "medium",
 		"maxSpriteSheetSize": 2048,
-		"loaderStyle": "splash",
+		"loaderStyle": "none",
 		"preloadSounds": true,
 		"clearBackground": true,
 		"enhancedAccelerationPrecision": true,
@@ -425,5 +426,5 @@
 	},
 	"viewportWidth": 1280,
 	"viewportHeight": 720,
-	"firstLayout": null
+	"firstLayout": "Layout 1"
 }
