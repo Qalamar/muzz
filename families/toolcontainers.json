@@ -1,5 +1,5 @@
 {
-	"name": "ToolUI",
+	"name": "ToolContainers",
 	"plugin-id": "Sprite",
 	"sid": 272458077346783,
 	"instanceVariables": [],
@@ -12,8 +12,8 @@
 	],
 	"effectTypes": [],
 	"members": [
-		"ToolUIVertical",
-		"ToolUIHorizontal",
-		"ToolUILong"
+		"ToolContainerVertical",
+		"ColorContainer",
+		"ToolContainerHorizontal"
 	]
 }

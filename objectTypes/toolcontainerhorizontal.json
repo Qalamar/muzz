@@ -1,7 +1,7 @@
 {
-	"name": "ToolUIVertical",
+	"name": "ToolContainerHorizontal",
 	"plugin-id": "Sprite",
-	"sid": 807453125378532,
+	"sid": 499999000735035,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -11,19 +11,19 @@
 			{
 				"frames": [
 					{
-						"width": 64,
-						"height": 446,
+						"width": 1280,
+						"height": 76,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 6332741,
+						"imageSpriteId": 4327155,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 633431533536587,
+				"sid": 865556036093886,
 				"name": "Default",
 				"isLooping": false,
 				"isPingPong": false,

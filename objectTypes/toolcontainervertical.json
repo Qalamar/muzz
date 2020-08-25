@@ -1,34 +1,29 @@
 {
-	"name": "ToolShadow2",
+	"name": "ToolContainerVertical",
 	"plugin-id": "Sprite",
-	"sid": 431742666222726,
+	"sid": 807453125378532,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
-	"effectTypes": [
-		{
-			"effectId": "sphere",
-			"name": "Sphere"
-		}
-	],
+	"effectTypes": [],
 	"animations": {
 		"items": [
 			{
 				"frames": [
 					{
-						"width": 76,
-						"height": 76,
+						"width": 64,
+						"height": 446,
 						"originX": 0.5,
 						"originY": 0.5,
-						"originalSource": "C:\\Users\\Tariq\\Downloads\\Photoshop clone\\shadow.png",
+						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 6108255,
+						"imageSpriteId": 6332741,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 156091846876957,
+				"sid": 633431533536587,
 				"name": "Default",
 				"isLooping": false,
 				"isPingPong": false,

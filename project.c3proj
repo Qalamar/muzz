@@ -16,72 +16,8 @@
 		},
 		{
 			"type": "plugin",
-			"id": "Touch",
-			"name": "Touch",
-			"author": "Scirra",
-			"version": "r210.2",
-			"bundled": false
-		},
-		{
-			"type": "plugin",
 			"id": "Browser",
 			"name": "Browser",
-			"author": "Scirra",
-			"version": "r210.2",
-			"bundled": false
-		},
-		{
-			"type": "plugin",
-			"id": "AJAX",
-			"name": "AJAX",
-			"author": "Scirra",
-			"version": "r210.2",
-			"bundled": false
-		},
-		{
-			"type": "plugin",
-			"id": "BinaryData",
-			"name": "Binary Data",
-			"author": "Scirra",
-			"version": "r210.2",
-			"bundled": false
-		},
-		{
-			"type": "plugin",
-			"id": "sliderbar",
-			"name": "Slider bar",
-			"author": "Scirra",
-			"version": "r210.2",
-			"bundled": false
-		},
-		{
-			"type": "plugin",
-			"id": "TextBox",
-			"name": "Text input",
-			"author": "Scirra",
-			"version": "r210.2",
-			"bundled": false
-		},
-		{
-			"type": "plugin",
-			"id": "List",
-			"name": "List",
-			"author": "Scirra",
-			"version": "r210.2",
-			"bundled": false
-		},
-		{
-			"type": "plugin",
-			"id": "filechooser",
-			"name": "File chooser",
-			"author": "Scirra",
-			"version": "r210.2",
-			"bundled": false
-		},
-		{
-			"type": "plugin",
-			"id": "Spritefont2",
-			"name": "Sprite font",
 			"author": "Scirra",
 			"version": "r210.2",
 			"bundled": false
@@ -96,8 +32,56 @@
 		},
 		{
 			"type": "plugin",
+			"id": "Touch",
+			"name": "Touch",
+			"author": "Scirra",
+			"version": "r210.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Spritefont2",
+			"name": "Sprite font",
+			"author": "Scirra",
+			"version": "r210.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Text",
 			"name": "Text",
+			"author": "Scirra",
+			"version": "r210.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "TextBox",
+			"name": "Text input",
+			"author": "Scirra",
+			"version": "r210.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "filechooser",
+			"name": "File chooser",
+			"author": "Scirra",
+			"version": "r210.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "sliderbar",
+			"name": "Slider bar",
+			"author": "Scirra",
+			"version": "r210.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "List",
+			"name": "List",
 			"author": "Scirra",
 			"version": "r210.2",
 			"bundled": false
@@ -123,14 +107,6 @@
 			"id": "DragnDrop",
 			"name": "Drag & Drop",
 			"author": "Scirra",
-			"version": "r210.2",
-			"bundled": false
-		},
-		{
-			"type": "effect",
-			"id": "sphere",
-			"name": "Sphere",
-			"author": "Brad Larson",
 			"version": "r210.2",
 			"bundled": false
 		},
@@ -162,6 +138,14 @@
 			"type": "effect",
 			"id": "swirl",
 			"name": "Swirl",
+			"author": "Brad Larson",
+			"version": "r210.2",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "sphere",
+			"name": "Sphere",
 			"author": "Brad Larson",
 			"version": "r210.2",
 			"bundled": false
@@ -201,60 +185,93 @@
 	],
 	"uniqueId": "qvlq90kpltx",
 	"objectTypes": {
-		"items": [
-			"RectangleObject",
-			"Touch",
-			"Browser",
-			"AJAX",
-			"BinaryData",
-			"FontSlider",
-			"HeightInput",
-			"List",
-			"FileChooser",
-			"Colors",
-			"Cursor",
-			"ToolShadow",
-			"TextUI",
-			"WidthInput",
-			"Text",
-			"TextTool",
-			"Keyboard",
-			"TextObject",
-			"Text2",
-			"TextFontSize",
-			"TextObjectDimensions",
-			"Brush",
-			"Dot1",
-			"ToolShadow2",
-			"SendBottom",
-			"SendTop",
-			"Lock",
-			"Import",
-			"ImportedImage",
-			"Rectangle",
-			"Circle",
-			"Triangle",
-			"Delete",
-			"CircleObject",
-			"TriangleObject",
-			"AngleInput",
-			"Export",
-			"ImportURL",
-			"URLInput",
-			"Clear",
-			"Overlay",
-			"OverlayHelp",
-			"OpacityInput"
-		],
+		"items": [],
 		"subfolders": [
 			{
 				"items": [
-					"ToolUIHorizontal",
-					"ToolUILong",
-					"ToolUIVertical"
+					"ColorContainer",
+					"ToolContainerHorizontal",
+					"ToolContainerVertical"
 				],
 				"subfolders": [],
-				"name": "ToolUI"
+				"name": "ToolContainers"
+			},
+			{
+				"items": [
+					"Brush",
+					"Circle",
+					"Clear",
+					"Cursor",
+					"Delete",
+					"Export",
+					"Import",
+					"ImportURL",
+					"Lock",
+					"Rectangle",
+					"SendBottom",
+					"SendTop",
+					"Triangle",
+					"Text"
+				],
+				"subfolders": [],
+				"name": "Tools"
+			},
+			{
+				"items": [
+					"Browser",
+					"Keyboard",
+					"Touch"
+				],
+				"subfolders": [],
+				"name": "Plugins"
+			},
+			{
+				"items": [
+					"TextFontSize",
+					"TextObject",
+					"TextObjectDimensions",
+					"TextTool",
+					"TextTutorial",
+					"TextUI"
+				],
+				"subfolders": [],
+				"name": "Text"
+			},
+			{
+				"items": [
+					"AngleInput",
+					"FileChooser",
+					"FontSlider",
+					"HeightInput",
+					"List",
+					"OpacityInput",
+					"URLInput",
+					"WidthInput"
+				],
+				"subfolders": [],
+				"name": "Inputs"
+			},
+			{
+				"items": [
+					"CircleObject",
+					"ImportedImage",
+					"RectangleObject",
+					"TriangleObject"
+				],
+				"subfolders": [],
+				"name": "CanvasObjects"
+			},
+			{
+				"items": [
+					"BrushDot",
+					"Colors",
+					"ColorShadow",
+					"Overlay",
+					"OverlayHelp",
+					"ToolShadow"
+				],
+				"subfolders": [],
+				"name": "UI"
 			}
 		]
 	},
@@ -262,7 +279,7 @@
 	"containers": [],
 	"families": {
 		"items": [
-			"ToolUI",
+			"ToolContainers",
 			"Anchors",
 			"Tools",
 			"CanvasObjects",
@@ -272,13 +289,13 @@
 	},
 	"layouts": {
 		"items": [
-			"Layout 1"
+			"Editor"
 		],
 		"subfolders": []
 	},
 	"eventSheets": {
 		"items": [
-			"Event sheet 1"
+			"Main"
 		],
 		"subfolders": []
 	},
@@ -360,6 +377,14 @@
 					"icon-info": {
 						"purpose": "loading-logo"
 					}
+				},
+				{
+					"name": "icon-114.png",
+					"type": "image/png",
+					"sid": 516472792284187,
+					"icon-info": {
+						"purpose": "none"
+					}
 				}
 			],
 			"subfolders": []
@@ -418,7 +443,7 @@
 		"sampling": "trilinear",
 		"downscaling": "medium",
 		"maxSpriteSheetSize": 2048,
-		"loaderStyle": "none",
+		"loaderStyle": "splash",
 		"preloadSounds": true,
 		"clearBackground": true,
 		"enhancedAccelerationPrecision": true,
@@ -426,5 +451,5 @@
 	},
 	"viewportWidth": 1280,
 	"viewportHeight": 720,
-	"firstLayout": "Layout 1"
+	"firstLayout": "Editor"
 }

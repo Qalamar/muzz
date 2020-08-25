@@ -1,5 +1,5 @@
 {
-	"name": "Event sheet 1",
+	"name": "Main",
 	"events": [
 		{
 			"eventType": "variable",
@@ -42,7 +42,7 @@
 				},
 				{
 					"id": "set-visible",
-					"objectClass": "ToolUI",
+					"objectClass": "ToolContainers",
 					"sid": 717930779734120,
 					"parameters": {
 						"visibility": "invisible"
@@ -107,7 +107,7 @@
 				},
 				{
 					"id": "set-visible",
-					"objectClass": "ToolUI",
+					"objectClass": "ToolContainers",
 					"sid": 135446041752315,
 					"parameters": {
 						"visibility": "visible"
@@ -665,7 +665,7 @@
 							"objectClass": "Colors",
 							"sid": 964434255214444,
 							"parameters": {
-								"object": "ToolShadow2",
+								"object": "ColorShadow",
 								"layer": "2",
 								"image-point": "0"
 							}
@@ -748,7 +748,7 @@
 			"actions": [
 				{
 					"id": "destroy",
-					"objectClass": "ToolShadow2",
+					"objectClass": "ColorShadow",
 					"sid": 122834191453494
 				}
 			],
@@ -827,13 +827,13 @@
 							"objectClass": "System",
 							"sid": 943163131733648,
 							"parameters": {
-								"object": "Text2",
-								"expression": "Text2.isSelected"
+								"object": "TextObject",
+								"expression": "TextObject.isSelected"
 							}
 						},
 						{
 							"id": "is-enabled",
-							"objectClass": "Text2",
+							"objectClass": "TextObject",
 							"sid": 347552600449790,
 							"behaviorType": "DragDrop"
 						}
@@ -850,7 +850,7 @@
 						},
 						{
 							"id": "set-font-color",
-							"objectClass": "Text2",
+							"objectClass": "TextObject",
 							"sid": 189611559817139,
 							"parameters": {
 								"color": "Colors.ColorValue"
@@ -887,18 +887,18 @@
 							"objectClass": "Colors",
 							"sid": 496585565200999,
 							"parameters": {
-								"object": "ToolShadow2",
+								"object": "ColorShadow",
 								"layer": "2",
 								"image-point": "0"
 							}
 						},
 						{
 							"id": "move-to-object",
-							"objectClass": "ToolShadow2",
+							"objectClass": "ColorShadow",
 							"sid": 152957372008946,
 							"parameters": {
 								"where": "in-front",
-								"object": "ToolUIHorizontal"
+								"object": "ColorContainer"
 							}
 						}
 					],
@@ -1081,7 +1081,7 @@
 						},
 						{
 							"id": "set-boolean-instvar",
-							"objectClass": "Text2",
+							"objectClass": "TextObject",
 							"sid": 157149197386131,
 							"parameters": {
 								"instance-variable": "isSelected",
@@ -1221,7 +1221,7 @@
 					"objectClass": "Touch",
 					"sid": 708906936085513,
 					"parameters": {
-						"object": "Text2"
+						"object": "TextObject"
 					}
 				},
 				{
@@ -1229,7 +1229,7 @@
 					"objectClass": "Touch",
 					"sid": 900039299956240,
 					"parameters": {
-						"object": "Text2"
+						"object": "TextObject"
 					}
 				}
 			],
@@ -1244,14 +1244,14 @@
 							"objectClass": "System",
 							"sid": 851526436832135,
 							"parameters": {
-								"object": "TextObject"
+								"object": "TextTutorial"
 							}
 						}
 					],
 					"actions": [
 						{
 							"id": "set-boolean-instvar",
-							"objectClass": "Text2",
+							"objectClass": "TextObject",
 							"sid": 448354681213273,
 							"parameters": {
 								"instance-variable": "isSelected",
@@ -1280,7 +1280,7 @@
 					"actions": [
 						{
 							"id": "set-boolean-instvar",
-							"objectClass": "Text2",
+							"objectClass": "TextObject",
 							"sid": 857805965953375,
 							"parameters": {
 								"instance-variable": "isSelected",
@@ -1299,7 +1299,7 @@
 					"conditions": [
 						{
 							"id": "is-boolean-instance-variable-set",
-							"objectClass": "Text2",
+							"objectClass": "TextObject",
 							"sid": 940203323106345,
 							"parameters": {
 								"instance-variable": "isLocked"
@@ -1309,7 +1309,7 @@
 					"actions": [
 						{
 							"id": "set-enabled",
-							"objectClass": "Text2",
+							"objectClass": "TextObject",
 							"sid": 545641470489401,
 							"behaviorType": "DragDrop",
 							"parameters": {
@@ -1339,7 +1339,7 @@
 					"actions": [
 						{
 							"id": "set-enabled",
-							"objectClass": "Text2",
+							"objectClass": "TextObject",
 							"sid": 691568498469880,
 							"behaviorType": "DragDrop",
 							"parameters": {
@@ -1381,7 +1381,7 @@
 				},
 				{
 					"id": "set-enabled",
-					"objectClass": "TextObject",
+					"objectClass": "TextTutorial",
 					"sid": 171951618285535,
 					"behaviorType": "DragDrop",
 					"parameters": {
@@ -1549,7 +1549,7 @@
 				},
 				{
 					"id": "is-boolean-instance-variable-set",
-					"objectClass": "Text2",
+					"objectClass": "TextObject",
 					"sid": 851013975151368,
 					"parameters": {
 						"instance-variable": "isSelected"
@@ -1559,7 +1559,7 @@
 			"actions": [
 				{
 					"id": "set-font-size",
-					"objectClass": "Text2",
+					"objectClass": "TextObject",
 					"sid": 919358557854975,
 					"parameters": {
 						"size-pt": "FontSlider.Value*0.42"
@@ -1567,11 +1567,11 @@
 				},
 				{
 					"id": "set-size",
-					"objectClass": "Text2",
+					"objectClass": "TextObject",
 					"sid": 624592287366352,
 					"parameters": {
-						"width": "-2.65*(len(Text2.Text)*len(Text2.Text))+92.2*len(Text2.Text)-204.7",
-						"height": "Text2.FaceSize*3"
+						"width": "-2.65*(len(TextObject.Text)*len(TextObject.Text))+92.2*len(TextObject.Text)-204.7",
+						"height": "TextObject.FaceSize*3"
 					}
 				}
 			],
@@ -1600,7 +1600,7 @@
 			"actions": [
 				{
 					"id": "set-boolean-instvar",
-					"objectClass": "Text2",
+					"objectClass": "TextObject",
 					"sid": 248509254654903,
 					"parameters": {
 						"instance-variable": "isSelected",
@@ -1612,7 +1612,7 @@
 					"objectClass": "System",
 					"sid": 989727227693510,
 					"parameters": {
-						"object-to-create": "Text2",
+						"object-to-create": "TextObject",
 						"layer": "1",
 						"x": "640",
 						"y": "360"
@@ -1620,7 +1620,7 @@
 				},
 				{
 					"id": "set-boolean-instvar",
-					"objectClass": "Text2",
+					"objectClass": "TextObject",
 					"sid": 574913662794422,
 					"parameters": {
 						"instance-variable": "isSelected",
@@ -1629,7 +1629,7 @@
 				},
 				{
 					"id": "set-text",
-					"objectClass": "Text2",
+					"objectClass": "TextObject",
 					"sid": 764450601687159,
 					"parameters": {
 						"text": "TextTool.Text"
@@ -1654,11 +1654,11 @@
 				},
 				{
 					"id": "set-size",
-					"objectClass": "Text2",
+					"objectClass": "TextObject",
 					"sid": 752950457785303,
 					"parameters": {
-						"width": "len(Text2.Text)*48/3",
-						"height": "Text2.FaceSize*2.5"
+						"width": "len(TextObject.Text)*48/3",
+						"height": "TextObject.FaceSize*2.5"
 					}
 				},
 				{
@@ -1696,7 +1696,7 @@
 			"actions": [
 				{
 					"id": "set-boolean-instvar",
-					"objectClass": "Text2",
+					"objectClass": "TextObject",
 					"sid": 853853284801492,
 					"parameters": {
 						"instance-variable": "isSelected",
@@ -1928,7 +1928,7 @@
 				},
 				{
 					"id": "set-enabled",
-					"objectClass": "Text2",
+					"objectClass": "TextObject",
 					"sid": 259812780344881,
 					"behaviorType": "DragDrop",
 					"parameters": {
@@ -2003,12 +2003,12 @@
 				},
 				{
 					"id": "destroy",
-					"objectClass": "Dot1",
+					"objectClass": "BrushDot",
 					"sid": 238759669776620
 				},
 				{
 					"id": "destroy",
-					"objectClass": "Text2",
+					"objectClass": "TextObject",
 					"sid": 986289792044972
 				},
 				{
@@ -2194,7 +2194,7 @@
 					"objectClass": "Touch",
 					"sid": 651351936048768,
 					"parameters": {
-						"object": "Dot1"
+						"object": "BrushDot"
 					}
 				},
 				{
@@ -2209,7 +2209,7 @@
 			"actions": [
 				{
 					"id": "destroy",
-					"objectClass": "Dot1",
+					"objectClass": "BrushDot",
 					"sid": 213405567685299
 				}
 			],
@@ -2223,7 +2223,7 @@
 					"objectClass": "Touch",
 					"sid": 172767612285567,
 					"parameters": {
-						"object": "Text2"
+						"object": "TextObject"
 					}
 				},
 				{
@@ -2236,7 +2236,7 @@
 				},
 				{
 					"id": "is-boolean-instance-variable-set",
-					"objectClass": "Text2",
+					"objectClass": "TextObject",
 					"sid": 751900817555686,
 					"parameters": {
 						"instance-variable": "isLocked"
@@ -2247,7 +2247,7 @@
 			"actions": [
 				{
 					"id": "tween-one-property",
-					"objectClass": "Text2",
+					"objectClass": "TextObject",
 					"sid": 458730796822173,
 					"behaviorType": "Tween",
 					"parameters": {
@@ -2309,15 +2309,15 @@
 							"objectClass": "System",
 							"sid": 119127762459992,
 							"parameters": {
-								"object": "Text2",
-								"expression": "Text2.isSelected"
+								"object": "TextObject",
+								"expression": "TextObject.isSelected"
 							}
 						}
 					],
 					"actions": [
 						{
 							"id": "move-to-bottom",
-							"objectClass": "Text2",
+							"objectClass": "TextObject",
 							"sid": 686656319431689
 						}
 					],
@@ -2370,15 +2370,15 @@
 							"objectClass": "System",
 							"sid": 385653053738652,
 							"parameters": {
-								"object": "Text2",
-								"expression": "Text2.isSelected"
+								"object": "TextObject",
+								"expression": "TextObject.isSelected"
 							}
 						}
 					],
 					"actions": [
 						{
 							"id": "move-to-top",
-							"objectClass": "Text2",
+							"objectClass": "TextObject",
 							"sid": 422343556656137
 						}
 					],
@@ -2435,15 +2435,15 @@
 					"objectClass": "System",
 					"sid": 422915694108788,
 					"parameters": {
-						"object": "Text2",
-						"expression": "Text2.isSelected"
+						"object": "TextObject",
+						"expression": "TextObject.isSelected"
 					}
 				}
 			],
 			"actions": [
 				{
 					"id": "toggle-boolean-instvar",
-					"objectClass": "Text2",
+					"objectClass": "TextObject",
 					"sid": 710927851473744,
 					"parameters": {
 						"instance-variable": "isLocked"
@@ -2457,7 +2457,7 @@
 			"conditions": [
 				{
 					"id": "on-created",
-					"objectClass": "Dot1",
+					"objectClass": "BrushDot",
 					"sid": 107732452766872
 				},
 				{
@@ -2473,7 +2473,7 @@
 			"actions": [
 				{
 					"id": "set-default-color",
-					"objectClass": "Dot1",
+					"objectClass": "BrushDot",
 					"sid": 483879791656603,
 					"parameters": {
 						"color": "Colors.ColorValue"
@@ -2508,7 +2508,7 @@
 					"objectClass": "Touch",
 					"sid": 195972314002450,
 					"parameters": {
-						"object": "ToolUI"
+						"object": "ToolContainers"
 					},
 					"isInverted": true
 				}
@@ -2519,7 +2519,7 @@
 					"objectClass": "System",
 					"sid": 633598055153354,
 					"parameters": {
-						"object-to-create": "Dot1",
+						"object-to-create": "BrushDot",
 						"layer": "1",
 						"x": "Touch.X",
 						"y": "Touch.y"
@@ -2536,7 +2536,7 @@
 				},
 				{
 					"id": "set-enabled",
-					"objectClass": "Text2",
+					"objectClass": "TextObject",
 					"sid": 901695547961820,
 					"behaviorType": "DragDrop",
 					"parameters": {
@@ -2614,7 +2614,7 @@
 					"conditions": [
 						{
 							"id": "is-boolean-instance-variable-set",
-							"objectClass": "Text2",
+							"objectClass": "TextObject",
 							"sid": 368918940218732,
 							"parameters": {
 								"instance-variable": "isLocked"
@@ -2625,7 +2625,7 @@
 					"actions": [
 						{
 							"id": "set-enabled",
-							"objectClass": "Text2",
+							"objectClass": "TextObject",
 							"sid": 758953753136088,
 							"behaviorType": "DragDrop",
 							"parameters": {
@@ -2816,8 +2816,8 @@
 					"objectClass": "System",
 					"sid": 465437323750291,
 					"parameters": {
-						"object": "Text2",
-						"expression": "Text2.isSelected"
+						"object": "TextObject",
+						"expression": "TextObject.isSelected"
 					}
 				}
 			],
@@ -2827,7 +2827,7 @@
 					"objectClass": "TextFontSize",
 					"sid": 688819582302832,
 					"parameters": {
-						"text": "round(int(Text2.FaceSize))"
+						"text": "round(int(TextObject.FaceSize))"
 					}
 				}
 			],

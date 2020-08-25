@@ -1,12 +1,12 @@
 {
-	"name": "Layout 1",
+	"name": "Editor",
 	"layers": [
 		{
-			"name": "ToolUI",
+			"name": "ToolContainers",
 			"overriden": 0,
 			"instances": [
 				{
-					"type": "Dot1",
+					"type": "BrushDot",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -66,53 +66,9 @@
 			"global": false
 		},
 		{
-			"name": "Layer 1",
+			"name": "IO",
 			"overriden": 0,
 			"instances": [
-				{
-					"type": "RectangleObject",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 2,
-					"instanceVariables": {
-						"isSelected": false,
-						"isLocked": false
-					},
-					"behaviors": {
-						"DragDrop": {
-							"properties": {
-								"axes": "both",
-								"enabled": true
-							}
-						},
-						"Tween": {
-							"properties": {
-								"enabled": true
-							}
-						}
-					},
-					"world": {
-						"x": 159,
-						"y": -865,
-						"width": 133,
-						"height": 133,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							0,
-							0,
-							0,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
 				{
 					"type": "FileChooser",
 					"properties": {
@@ -137,6 +93,152 @@
 							1,
 							1
 						]
+					}
+				}
+			],
+			"sid": 209757550830931,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"global": false
+		},
+		{
+			"name": "UI",
+			"overriden": 0,
+			"instances": [
+				{
+					"type": "ToolContainerHorizontal",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Default",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 11,
+					"instanceVariables": {},
+					"behaviors": {
+						"Anchor": {
+							"properties": {
+								"left-edge": "none",
+								"top-edge": "window-top",
+								"right-edge": "none",
+								"bottom-edge": "none",
+								"enabled": true
+							}
+						}
+					},
+					"world": {
+						"x": 871,
+						"y": 37,
+						"width": 2208,
+						"height": 80,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "ToolContainerVertical",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Default",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 12,
+					"instanceVariables": {},
+					"behaviors": {
+						"Anchor": {
+							"properties": {
+								"left-edge": "window-left",
+								"top-edge": "window-top",
+								"right-edge": "none",
+								"bottom-edge": "none",
+								"enabled": true
+							}
+						}
+					},
+					"world": {
+						"x": 31,
+						"y": 367,
+						"width": 64,
+						"height": 480,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "ColorContainer",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Default",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 13,
+					"instanceVariables": {},
+					"behaviors": {
+						"Anchor": {
+							"properties": {
+								"left-edge": "window-left",
+								"top-edge": "window-bottom",
+								"right-edge": "none",
+								"bottom-edge": "none",
+								"enabled": true
+							}
+						}
+					},
+					"world": {
+						"x": 641.5,
+						"y": 695,
+						"width": 512,
+						"height": 96,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
 					}
 				},
 				{
@@ -231,208 +333,6 @@
 						"y": -977,
 						"width": 24,
 						"height": 24,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "TextObject",
-					"properties": {
-						"text": "Export",
-						"enable-bbcode": false,
-						"character-width": 30,
-						"character-height": 30,
-						"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#\"'&()[]|`\\/@°+=*$£€<>%",
-						"spacing-data": " [[7,\" \"],[5,\"l'|\"],[6,\"Ii.,;:!\"],[8,\"()[`°\"],[9,\"1-\\\"]\"],[10,\"jr*\"],[12,\"ft?~\"],[13,\"JLsz\\/\"],[14,\"Fak+=<>\"],[15,\"Echnuvxy026789£\"],[16,\"BPRSTbegp35_$\"],[17,\"HKNdoq4&\"],[18,\"DUYZ\"],[19,\"CGVX#\"],[20,\"AM\"],[21,\"O€\"],[22,\"Q\"],[24,\"mw%\"],[25,\"@\"],[28,\"W\"]]",
-						"scale": 0.6,
-						"character-spacing": 0,
-						"line-height": 0,
-						"horizontal-alignment": "center",
-						"vertical-alignment": "center",
-						"wrapping": "word",
-						"initially-visible": true,
-						"origin": "center"
-					},
-					"uid": 57,
-					"instanceVariables": {
-						"isSelected": false
-					},
-					"behaviors": {
-						"DragDrop": {
-							"properties": {
-								"axes": "both",
-								"enabled": true
-							}
-						},
-						"Anchor": {
-							"properties": {
-								"left-edge": "window-left",
-								"top-edge": "window-top",
-								"right-edge": "none",
-								"bottom-edge": "none",
-								"enabled": true
-							}
-						}
-					},
-					"world": {
-						"x": 80,
-						"y": 176,
-						"width": 64,
-						"height": 48,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				}
-			],
-			"sid": 209757550830931,
-			"effectTypes": [],
-			"isInitiallyVisible": true,
-			"color": [
-				1,
-				1,
-				1,
-				1
-			],
-			"backgroundColor": [
-				0.3686274509803922,
-				0.3686274509803922,
-				0.3686274509803922,
-				1
-			],
-			"isTransparent": true,
-			"parallaxX": 1,
-			"parallaxY": 1,
-			"scaleRate": 1,
-			"forceOwnTexture": false,
-			"useRenderCells": false,
-			"blendMode": "normal",
-			"global": false
-		},
-		{
-			"name": "UI",
-			"overriden": 0,
-			"instances": [
-				{
-					"type": "ToolUILong",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Default",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 11,
-					"instanceVariables": {},
-					"behaviors": {
-						"Anchor": {
-							"properties": {
-								"left-edge": "none",
-								"top-edge": "window-top",
-								"right-edge": "none",
-								"bottom-edge": "none",
-								"enabled": true
-							}
-						}
-					},
-					"world": {
-						"x": 699,
-						"y": 37,
-						"width": 1864,
-						"height": 76,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "ToolUIVertical",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Default",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 12,
-					"instanceVariables": {},
-					"behaviors": {
-						"Anchor": {
-							"properties": {
-								"left-edge": "window-left",
-								"top-edge": "window-top",
-								"right-edge": "none",
-								"bottom-edge": "none",
-								"enabled": true
-							}
-						}
-					},
-					"world": {
-						"x": 31,
-						"y": 367,
-						"width": 64,
-						"height": 480,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "ToolUIHorizontal",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Default",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 13,
-					"instanceVariables": {},
-					"behaviors": {
-						"Anchor": {
-							"properties": {
-								"left-edge": "window-left",
-								"top-edge": "window-bottom",
-								"right-edge": "none",
-								"bottom-edge": "none",
-								"enabled": true
-							}
-						}
-					},
-					"world": {
-						"x": 641.5,
-						"y": 695,
-						"width": 512,
-						"height": 96,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -773,7 +673,7 @@
 					}
 				},
 				{
-					"type": "Text2",
+					"type": "TextObject",
 					"properties": {
 						"text": "Text",
 						"enable-bbcode": true,
@@ -1304,7 +1204,7 @@
 					}
 				},
 				{
-					"type": "ToolShadow2",
+					"type": "ColorShadow",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
@@ -1716,6 +1616,50 @@
 					}
 				},
 				{
+					"type": "RectangleObject",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 2,
+					"instanceVariables": {
+						"isSelected": false,
+						"isLocked": false
+					},
+					"behaviors": {
+						"DragDrop": {
+							"properties": {
+								"axes": "both",
+								"enabled": true
+							}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
+					"world": {
+						"x": 159,
+						"y": -865,
+						"width": 133,
+						"height": 133,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
 					"type": "TriangleObject",
 					"properties": {
 						"initially-visible": true,
@@ -2098,7 +2042,7 @@
 					}
 				},
 				{
-					"type": "TextObject",
+					"type": "TextTutorial",
 					"properties": {
 						"text": "Import images",
 						"enable-bbcode": false,
@@ -2154,7 +2098,7 @@
 					}
 				},
 				{
-					"type": "TextObject",
+					"type": "TextTutorial",
 					"properties": {
 						"text": "Z-order",
 						"enable-bbcode": false,
@@ -2210,7 +2154,7 @@
 					}
 				},
 				{
-					"type": "TextObject",
+					"type": "TextTutorial",
 					"properties": {
 						"text": "Lock",
 						"enable-bbcode": false,
@@ -2266,7 +2210,7 @@
 					}
 				},
 				{
-					"type": "TextObject",
+					"type": "TextTutorial",
 					"properties": {
 						"text": "Apply effects",
 						"enable-bbcode": false,
@@ -2322,7 +2266,7 @@
 					}
 				},
 				{
-					"type": "TextObject",
+					"type": "TextTutorial",
 					"properties": {
 						"text": "Clear",
 						"enable-bbcode": false,
@@ -2378,7 +2322,7 @@
 					}
 				},
 				{
-					"type": "TextObject",
+					"type": "TextTutorial",
 					"properties": {
 						"text": "Export",
 						"enable-bbcode": false,
@@ -2434,7 +2378,7 @@
 					}
 				},
 				{
-					"type": "TextObject",
+					"type": "TextTutorial",
 					"properties": {
 						"text": "Select",
 						"enable-bbcode": false,
@@ -2490,7 +2434,7 @@
 					}
 				},
 				{
-					"type": "TextObject",
+					"type": "TextTutorial",
 					"properties": {
 						"text": "Text",
 						"enable-bbcode": false,
@@ -2546,7 +2490,7 @@
 					}
 				},
 				{
-					"type": "TextObject",
+					"type": "TextTutorial",
 					"properties": {
 						"text": "Brush",
 						"enable-bbcode": false,
@@ -2602,7 +2546,7 @@
 					}
 				},
 				{
-					"type": "TextObject",
+					"type": "TextTutorial",
 					"properties": {
 						"text": "Shapes",
 						"enable-bbcode": false,
@@ -2658,7 +2602,7 @@
 					}
 				},
 				{
-					"type": "TextObject",
+					"type": "TextTutorial",
 					"properties": {
 						"text": "Delete objects",
 						"enable-bbcode": false,
@@ -2714,7 +2658,7 @@
 					}
 				},
 				{
-					"type": "TextObject",
+					"type": "TextTutorial",
 					"properties": {
 						"text": "Colors",
 						"enable-bbcode": false,
@@ -2999,19 +2943,10 @@
 		}
 	],
 	"sid": 267960071962815,
-	"nonworld-instances": [
-		{
-			"type": "BinaryData",
-			"properties": {
-				"endian": "big"
-			},
-			"uid": 6,
-			"instanceVariables": {}
-		}
-	],
+	"nonworld-instances": [],
 	"effectTypes": [],
 	"width": 1280,
 	"height": 720,
 	"unboundedScrolling": false,
-	"eventSheet": "Event sheet 1"
+	"eventSheet": "Main"
 }

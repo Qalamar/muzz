@@ -1,38 +1,33 @@
 {
 	"name": "TextObject",
-	"plugin-id": "Spritefont2",
-	"sid": 614990038855380,
+	"plugin-id": "Text",
+	"sid": 669396956465430,
 	"isGlobal": false,
 	"instanceVariables": [
 		{
 			"name": "isSelected",
 			"type": "boolean",
 			"desc": "",
-			"sid": 410435911494128
+			"sid": 880848310710331
+		},
+		{
+			"name": "isLocked",
+			"type": "boolean",
+			"desc": "",
+			"sid": 850327050624423
 		}
 	],
 	"behaviorTypes": [
 		{
 			"behaviorId": "DragnDrop",
 			"name": "DragDrop",
-			"sid": 976789959520073
+			"sid": 400434376479976
 		},
 		{
-			"behaviorId": "Anchor",
-			"name": "Anchor",
-			"sid": 543269523663585
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 656750358605366
 		}
 	],
-	"effectTypes": [],
-	"image": {
-		"width": 512,
-		"height": 256,
-		"originX": 0.5,
-		"originY": 0.5,
-		"originalSource": "",
-		"exportFormat": "png",
-		"exportQuality": 0.8,
-		"imageSpriteId": 3249140,
-		"useCollisionPoly": true
-	}
+	"effectTypes": []
 }
