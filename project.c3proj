@@ -1,7 +1,7 @@
 {
 	"projectFormatVersion": 1,
 	"savedWithRelease": 21002,
-	"name": "New project",
+	"name": "DrawMuzz",
 	"runtime": "c3",
 	"useWorker": "auto",
 	"bundleAddons": false,
@@ -406,9 +406,9 @@
 	"properties": {
 		"description": "",
 		"version": "1.0.0.0",
-		"author": "Qalamars",
-		"authorEmail": "contact@qalamars.com",
-		"authorWebsite": "https://qalamars.com/",
+		"author": "Tariq Hamrit",
+		"authorEmail": "contact@tariqhamrit.com",
+		"authorWebsite": "https://tariqhamrit.com/",
 		"appId": "",
 		"pixelRounding": false,
 		"useLoaderLayout": false,

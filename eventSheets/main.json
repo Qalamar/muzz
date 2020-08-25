@@ -642,6 +642,96 @@
 						"property-name": "\"text-align\"",
 						"value": "\"center\""
 					}
+				},
+				{
+					"id": "set-css-style",
+					"objectClass": "OpacityInput",
+					"sid": 443953766841874,
+					"parameters": {
+						"property-name": "\"background-color\"",
+						"value": "\"rgb(24, 26, 27)\""
+					}
+				},
+				{
+					"id": "set-css-style",
+					"objectClass": "OpacityInput",
+					"sid": 278117466263897,
+					"parameters": {
+						"property-name": "\"color\"",
+						"value": "\"#fff\""
+					}
+				},
+				{
+					"id": "set-css-style",
+					"objectClass": "AngleInput",
+					"sid": 164905561310578,
+					"parameters": {
+						"property-name": "\"background-color\"",
+						"value": "\"rgb(24, 26, 27)\""
+					}
+				},
+				{
+					"id": "set-css-style",
+					"objectClass": "AngleInput",
+					"sid": 895206803097710,
+					"parameters": {
+						"property-name": "\"color\"",
+						"value": "\"#fff\""
+					}
+				},
+				{
+					"id": "set-css-style",
+					"objectClass": "HeightInput",
+					"sid": 740093495264441,
+					"parameters": {
+						"property-name": "\"background-color\"",
+						"value": "\"rgb(24, 26, 27)\""
+					}
+				},
+				{
+					"id": "set-css-style",
+					"objectClass": "HeightInput",
+					"sid": 763683472721202,
+					"parameters": {
+						"property-name": "\"color\"",
+						"value": "\"#fff\""
+					}
+				},
+				{
+					"id": "set-css-style",
+					"objectClass": "WidthInput",
+					"sid": 838774887103915,
+					"parameters": {
+						"property-name": "\"background-color\"",
+						"value": "\"rgb(24, 26, 27)\""
+					}
+				},
+				{
+					"id": "set-css-style",
+					"objectClass": "WidthInput",
+					"sid": 713475483450870,
+					"parameters": {
+						"property-name": "\"color\"",
+						"value": "\"#fff\""
+					}
+				},
+				{
+					"id": "set-css-style",
+					"objectClass": "List",
+					"sid": 581156315471854,
+					"parameters": {
+						"property-name": "\"background-color\"",
+						"value": "\"rgb(24,26,27)\""
+					}
+				},
+				{
+					"id": "set-css-style",
+					"objectClass": "List",
+					"sid": 933927097541283,
+					"parameters": {
+						"property-name": "\"color\"",
+						"value": "\"#fff\""
+					}
 				}
 			],
 			"sid": 182726554256657,
