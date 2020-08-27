@@ -5,7 +5,7 @@ Draw Muzz is a lightweight Drawing and Image Editing web application running cli
 
 **Technologies:** JavaScript| WebGL | HTML5 | Apache Cordova 
 
-**Preview Link:** [DrawMuzz](https://editor.construct.net/)
+**Preview Link:** [DrawMuzz](https://drawmuzz.web.app/)
 # Prequisities
 
 - Download the project files and extract them
