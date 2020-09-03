@@ -443,7 +443,7 @@
 		"sampling": "trilinear",
 		"downscaling": "medium",
 		"maxSpriteSheetSize": 2048,
-		"loaderStyle": "splash",
+		"loaderStyle": "none",
 		"preloadSounds": true,
 		"clearBackground": true,
 		"enhancedAccelerationPrecision": true,
