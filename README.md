@@ -27,7 +27,7 @@ Draw Muzz is a lightweight Drawing and Image Editing web application running cli
 
 # Screenshots
 
-![Screenshot - Desktop](https://i.imgur.com/5DIi3Ng.gif)
+![Screenshot - Desktop](https://i.imgur.com/8CWnAeC.gif)
 
 ![Screenshot - Desktop](https://i.imgur.com/cLeEOLf.gif)
 ![Screenshot - Desktop](https://i.imgur.com/TO3EwqN.gif)
