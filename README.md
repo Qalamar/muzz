@@ -1,7 +1,11 @@
 
-# Draw Muzz
+# Intro
 
-Draw Muzz is a lightweight Drawing and Image Editing web application running client-side in a small package ~500KB
+Muzz is an open-source tool for light picture editing and experimenting with WebGL effects.
+
+- Import files locally or via a URL.
+- Proccessing is done client-side.
+- Live-preview in your browser.
 
 **Technologies:** JavaScript| WebGL | HTML5 | Apache Cordova 
 
