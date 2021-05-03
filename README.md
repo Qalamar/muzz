@@ -22,8 +22,5 @@ Muzz is an open-source tool for light picture editing and experimenting with Web
 
 # Screenshots
 
-![Screenshot - Desktop](https://i.imgur.com/cLeEOLf.gif)
-
-![Screenshot - Desktop](https://i.imgur.com/TO3EwqN.gif)
-
+![image](https://user-images.githubusercontent.com/17028936/116894274-c4c7d800-ac29-11eb-92c7-93d30b362239.png)
 
